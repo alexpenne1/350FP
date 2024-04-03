@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1712171812">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1712174789">
   <File Type="PA-TCL" Name="Wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Wrapper_reports.tcl"/>
@@ -18,7 +18,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../Lab6/lab6-7_kit/lab6_kit/RAM_VGA.v">
+    <File Path="$PPRDIR/../../OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/RAM_VGA.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -32,7 +32,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../Lab6/lab6-7_kit/lab6_kit/VGATimingGenerator.v">
+    <File Path="$PPRDIR/../../OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/VGATimingGenerator.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -305,7 +305,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../Lab6/lab6-7_kit/lab6_kit/Ps2Interface.vhd">
+    <File Path="$PPRDIR/../../OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/Ps2Interface.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -530,31 +530,31 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../Lab6/lab6-7_kit/lab6_kit/sprites.mem">
+    <File Path="$PPRDIR/../../OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/sprites.mem">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../Lab6/lab6-7_kit/lab6_kit/ascii.mem">
+    <File Path="$PPRDIR/../../OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/ascii.mem">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../Lab6/lab6-7_kit/lab6_kit/image.mem">
+    <File Path="$PPRDIR/../../OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/image.mem">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../Lab6/lab6-7_kit/lab6_kit/colors.mem">
+    <File Path="$PPRDIR/../../OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/colors.mem">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../Lab6/lab6-7_kit/lab6_kit/VGAController.v">
+    <File Path="$PPRDIR/../../OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/VGAController.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -575,7 +575,7 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PPRDIR/../Lab3/lab-3-starter/lab-3-master/master.xdc">
+    <File Path="$PPRDIR/../../OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

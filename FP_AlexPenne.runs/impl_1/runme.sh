@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/FP_AlexPenne.runs/impl_1'
+HD_PWD='C:/Users/adp69/Documents/350FP/FP_AlexPenne.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

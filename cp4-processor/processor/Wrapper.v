@@ -24,15 +24,16 @@
  *
  **/
 
-module Wrapper (LED, BTNL, CLK100MHZ, CPU_RESETN, VGA_R, VGA_B, VGA_G, ps2_clk, ps2_data);
+module Wrapper (LED, BTNL, CLK100MHZ, CPU_RESETN, VGA_R, VGA_B, VGA_G, ps2_clk, ps2_data, hSync, vSync);
 	input CLK100MHZ;
 	input BTNL, CPU_RESETN;
 	output[3:0] VGA_R;  // Red Signal Bits
 	output[3:0] VGA_G;  // Green Signal Bits
 	output[3:0] VGA_B;  // Blue Signal Bits
+	output hSync, vSync;
 	inout ps2_clk;
 	inout ps2_data;
-	output [6:0] LED;
+	output [15:0] LED;
 	
 	/* VGA SCREEN */
 	wire [7:0] rx_data;
@@ -65,7 +66,7 @@ module Wrapper (LED, BTNL, CLK100MHZ, CPU_RESETN, VGA_R, VGA_B, VGA_G, ps2_clk, 
 		.WIDTH(VIDEO_WIDTH))
 	Display( 
 		.clk25(clk25),  	   // 25MHz Pixel Clock
-		.reset(CPU_RESETN),		   // Reset Signal
+		.reset(reset),		   // Reset Signal
 		.screenEnd(screenEnd), // High for one cycle when between two frames
 		.active(active),	   // High when drawing pixels
 		.hSync(hSync),  	   // Set Generated H Signal
@@ -110,27 +111,72 @@ module Wrapper (LED, BTNL, CLK100MHZ, CPU_RESETN, VGA_R, VGA_B, VGA_G, ps2_clk, 
 		.dataOut(colorData),				       // Color at current pixel
 		.wEn(1'b0)); 						       // We're always reading
 
+
+    wire [6:0] asciiCode;
+	RAM_VGA #(
+	   .DEPTH(128),
+	   .DATA_WIDTH(7),
+	   .ADDRESS_WIDTH(7),
+	   .MEMFILE("ascii.mem"))
+	Key(
+	   .clk(CLK100MHZ),
+	   .addr(key_data),
+	   .dataOut(asciiCode),
+	   .wEn(1'b0));
+	   
+	localparam
+	   NUMBER_OF_SPRITES = 94,
+	   SPRITE_WIDTH = 50,
+	   SPRITE_AREA = 2500,
+	   SPRITE_ADDR_WIDTH = $clog2(NUMBER_OF_SPRITES * SPRITE_AREA) + 1;
+    
+	wire spriteOut;
+	RAM_VGA #(
+	   .DEPTH(NUMBER_OF_SPRITES * SPRITE_AREA),
+	   .DATA_WIDTH(1),
+	   .ADDRESS_WIDTH(SPRITE_ADDR_WIDTH),
+	   .MEMFILE("sprites.mem"))
+	Sprite(
+	   .clk(CLK100MHZ),
+	   .addr((asciiCode - 1) * SPRITE_AREA + x - ref_pointx + SPRITE_WIDTH * (y - ref_pointy)),
+	   .dataOut(spriteOut),
+	   .wEn(1'b0));
+	   
+
+
+
+
     	// Assign to output color from register if active
 	wire[BITS_PER_COLOR-1:0] colorOut; 			  // Output color 
 	assign colorOut = active ? colorData : 12'd0; // When not active, output active
-	assign LED[6] = active;
+	
 	assign {VGA_R, VGA_G, VGA_B} = colorOut;
+	
+	wire [11:0] spriteColor;
+	assign spriteColor = {{12{spriteOut}}};
+	
 	wire rwe, mwe;
 	wire[4:0] rd, rs1, rs2;
 	wire[31:0] instAddr, instData, 
 		rData, regA, regB,
 		memAddr, memDataIn, memDataOut;
 	
-	assign LED[5:0] = instAddr[5:0];
-	wire reset = 1'b0;
+	assign LED[3:0] = VGA_B[3:0];
+	assign LED[7:4] = VGA_R[3:0];
+	assign LED[11:8] = VGA_G[3:0];
+	assign LED[15] = active;
+	assign LED[14] = 1'b0;
+	assign LED[13] = 1'b0;
+	assign LED[12] = 1'b0;
+	wire reset = ~CPU_RESETN;
 	
 
 assign clock = BTNL;
 	// ADD YOUR MEMORY FILE HERE
-	localparam INSTR_FILE = "nop";
+	localparam INSTR_FILE = "add_test";
 	
 	// Main Processing Unit
-	processor CPU(.clock(clock), .reset(~CPU_RESETN), 
+	processor CPU(.clock(clock), .reset(reset), 
 								
 		// ROM
 		.address_imem(instAddr), .q_imem(instData),

@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/FP_AlexPenne.runs/synth_1/Wrapper.tcl"
+  variable script "C:/Users/adp69/Documents/350FP/FP_AlexPenne.runs/synth_1/Wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 3
 set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
@@ -77,8 +78,8 @@ create_project -in_memory -part xc7a100tcsg324-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/FP_AlexPenne.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/FP_AlexPenne.xpr} [current_project]
+set_property webtalk.parent_dir C:/Users/adp69/Documents/350FP/FP_AlexPenne.cache/wt [current_project]
+set_property parent.project_path C:/Users/adp69/Documents/350FP/FP_AlexPenne.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo {c:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/FP_AlexPenne.cache/ip} [current_project]
@@ -86,78 +87,78 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_mem {
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Test Files/Memory Files/byp_exceptions.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Test Files/Memory Files/byp_zero.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Test Files/Memory Files/stall.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Test Files/Memory Files/byp_branch.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Test Files/Memory Files/byp_to_alu.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Test Files/Memory Files/multdiv_test.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Test Files/Memory Files/exception_test.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Test Files/Memory Files/jr_test.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Test Files/Memory Files/bne_test.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Test Files/Memory Files/sample.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Test Files/Memory Files/bex_test.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Test Files/Memory Files/complete_test.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Test Files/Memory Files/sort.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Test Files/Memory Files/byp_to_m.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Test Files/Memory Files/mem_test.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Test Files/Memory Files/jal_test.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Test Files/Memory Files/add_test.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Test Files/Memory Files/addi_basic.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Test Files/Memory Files/jr_test_2.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Test Files/Memory Files/blt_test.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Test Files/Memory Files/byp_from_m.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Test Files/Memory Files/jump_test.mem}
+  {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/byp_exceptions.mem}
+  {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/byp_zero.mem}
+  {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/stall.mem}
+  {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/byp_branch.mem}
+  {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/byp_to_alu.mem}
+  {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/multdiv_test.mem}
+  {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/exception_test.mem}
+  {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/jr_test.mem}
+  {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/bne_test.mem}
+  {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/sample.mem}
+  {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/bex_test.mem}
+  {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/complete_test.mem}
+  {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/sort.mem}
+  {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/byp_to_m.mem}
+  {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/mem_test.mem}
+  {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/jal_test.mem}
+  {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/add_test.mem}
+  {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/addi_basic.mem}
+  {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/jr_test_2.mem}
+  {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/blt_test.mem}
+  {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/byp_from_m.mem}
+  {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/jump_test.mem}
   {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/sprites.mem}
   {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/ascii.mem}
   {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/image.mem}
   {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/colors.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/Copy of ece350-assembler-windows/nop.mem}
+  {C:/Users/adp69/Documents/350FP/Copy of ece350-assembler-windows/nop.mem}
 }
 read_verilog -library xil_defaultlib {
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/RAM.v}
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/RAM.v
   {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/RAM_VGA.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/ROM.v}
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/ROM.v
   {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/VGATimingGenerator.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/alu.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/and_32.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/cla_32.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/cla_4.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/cla_combinational_32.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/cla_combinational_4.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/cls_32.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/control.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/decode.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/dffe_cus.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/dffe_ref.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/div.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/extender.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/extender_target.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/full_adder.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mult.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/multdiv.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mux_2.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mux_2_5.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mux_32.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mux_4.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mux_4_5.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mux_8.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mux_8_5.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/negate.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/not_32.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/op_decode.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/or_32.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/or_32_input.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/regfile.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/register.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/rrd_shift.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/sll.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/sra.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/tff.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/tff16.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/tff32.v}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Wrapper.v}
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/alu.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/and_32.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/cla_32.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/cla_4.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/cla_combinational_32.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/cla_combinational_4.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/cls_32.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/control.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/decode.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/dffe_cus.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/dffe_ref.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/div.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/extender.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/extender_target.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/full_adder.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/mult.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/multdiv.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/mux_2.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/mux_2_5.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/mux_32.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/mux_4.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/mux_4_5.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/mux_8.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/mux_8_5.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/negate.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/not_32.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/op_decode.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/or_32.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/or_32_input.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/processor.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/regfile.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/register.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/rrd_shift.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/sll.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/sra.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/tff.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/tff16.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/tff32.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v
 }
 read_vhdl -library xil_defaultlib {{C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/Ps2Interface.vhd}}
 OPTRACE "Adding files" END { }

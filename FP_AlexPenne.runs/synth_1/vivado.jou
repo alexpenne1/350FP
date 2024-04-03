@@ -2,11 +2,11 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Wed Apr  3 15:16:55 2024
-# Process ID: 5720
-# Current directory: C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/FP_AlexPenne.runs/synth_1
+# Start of session at: Wed Apr  3 16:06:31 2024
+# Process ID: 14204
+# Current directory: C:/Users/adp69/Documents/350FP/FP_AlexPenne.runs/synth_1
 # Command line: vivado.exe -log Wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Wrapper.tcl
-# Log file: C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/FP_AlexPenne.runs/synth_1/Wrapper.vds
-# Journal file: C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/FP_AlexPenne.runs/synth_1\vivado.jou
+# Log file: C:/Users/adp69/Documents/350FP/FP_AlexPenne.runs/synth_1/Wrapper.vds
+# Journal file: C:/Users/adp69/Documents/350FP/FP_AlexPenne.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source Wrapper.tcl -notrace

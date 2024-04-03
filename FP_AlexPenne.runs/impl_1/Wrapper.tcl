@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/FP_AlexPenne.runs/impl_1/Wrapper.tcl"
+  variable script "C:/Users/adp69/Documents/350FP/FP_AlexPenne.runs/impl_1/Wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -130,13 +130,13 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/FP_AlexPenne.cache/wt} [current_project]
-  set_property parent.project_path {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/FP_AlexPenne.xpr} [current_project]
+  set_property webtalk.parent_dir C:/Users/adp69/Documents/350FP/FP_AlexPenne.cache/wt [current_project]
+  set_property parent.project_path C:/Users/adp69/Documents/350FP/FP_AlexPenne.xpr [current_project]
   set_property ip_output_repo {{C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/FP_AlexPenne.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet {{C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/FP_AlexPenne.runs/synth_1/Wrapper.dcp}}
+  add_files -quiet C:/Users/adp69/Documents/350FP/FP_AlexPenne.runs/synth_1/Wrapper.dcp
 OPTRACE "read constraints: implementation" START { }
   read_xdc {{C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc}}
 OPTRACE "read constraints: implementation" END { }
