@@ -1,0 +1,4 @@
+Test Number, WriteEnable, Reset, WriteReg, WriteData, ReadRegA, ReadRegB,DataRegA, DataRegB, ExpReadDataA, ExpReadDataB
+32,1,0,31,-2147483648,31,31,          z,          z,-2147483648,-2147483648
+48,0,0,31,         -1,15,31,      32768,          z,      32768,-2147483648
+64,0,0,15,         -1,15,31,          0,          z,          0,          0

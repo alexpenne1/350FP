@@ -1,0 +1,658 @@
+
+*** Running vivado
+    with args -log Wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Wrapper.tcl
+
+
+
+****** Vivado v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source Wrapper.tcl -notrace
+Command: synth_design -top Wrapper -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7048
+WARNING: [Synth 8-6901] identifier 'rd_d' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:165]
+WARNING: [Synth 8-6901] identifier 'rd_x' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:165]
+WARNING: [Synth 8-6901] identifier 'rd_d' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:166]
+WARNING: [Synth 8-6901] identifier 'rd' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:166]
+WARNING: [Synth 8-6901] identifier 'isLW' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:200]
+WARNING: [Synth 8-6901] identifier 'rd_x' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:201]
+WARNING: [Synth 8-6901] identifier 'rd_x' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:202]
+WARNING: [Synth 8-6901] identifier 'rd' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:203]
+WARNING: [Synth 8-6901] identifier 'opcode_m' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:203]
+WARNING: [Synth 8-6901] identifier 'rd' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:204]
+WARNING: [Synth 8-6901] identifier 'opcode_m' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:204]
+WARNING: [Synth 8-6901] identifier 'opcode_m' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:204]
+WARNING: [Synth 8-6901] identifier 'opcode_m' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:204]
+WARNING: [Synth 8-6901] identifier 'opcode_m' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:204]
+WARNING: [Synth 8-6901] identifier 'rd_d' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:208]
+WARNING: [Synth 8-6901] identifier 'rd_x' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:208]
+WARNING: [Synth 8-6901] identifier 'rd_d' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:209]
+WARNING: [Synth 8-6901] identifier 'rd' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:209]
+WARNING: [Synth 8-6901] identifier 'rd_x' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:230]
+WARNING: [Synth 8-6901] identifier 'rs_d_zero' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:230]
+WARNING: [Synth 8-6901] identifier 'rd' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:231]
+WARNING: [Synth 8-6901] identifier 'rs_d_zero' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:231]
+WARNING: [Synth 8-6901] identifier 'current_insn_m' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:231]
+WARNING: [Synth 8-6901] identifier 'current_insn_m' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:231]
+WARNING: [Synth 8-6901] identifier 'rt_d' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:236]
+WARNING: [Synth 8-6901] identifier 'rd_x' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:256]
+WARNING: [Synth 8-6901] identifier 'rt_d_zero' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:256]
+WARNING: [Synth 8-6901] identifier 'rd' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:257]
+WARNING: [Synth 8-6901] identifier 'rt_d_zero' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:257]
+WARNING: [Synth 8-6901] identifier 'current_insn_m' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:257]
+WARNING: [Synth 8-6901] identifier 'current_insn_m' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:257]
+WARNING: [Synth 8-6901] identifier 'rd_x' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:262]
+WARNING: [Synth 8-6901] identifier 'rd_d_zero' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:262]
+WARNING: [Synth 8-6901] identifier 'rd' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:263]
+WARNING: [Synth 8-6901] identifier 'rd_d_zero' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:263]
+WARNING: [Synth 8-6901] identifier 'is_jal_m' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:381]
+WARNING: [Synth 8-6901] identifier 'isLW' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:392]
+WARNING: [Synth 8-6901] identifier 'rd' is used before its declaration [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:392]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1329.062 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Wrapper' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Wrapper.v:27]
+INFO: [Synth 8-638] synthesizing module 'Ps2Interface' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/Ps2Interface.vhd:180]
+INFO: [Synth 8-256] done synthesizing module 'Ps2Interface' (1#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/Ps2Interface.vhd:180]
+WARNING: [Synth 8-7071] port 'rst' of module 'Ps2Interface' is unconnected for instance 'psiface' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Wrapper.v:40]
+WARNING: [Synth 8-7071] port 'tx_data' of module 'Ps2Interface' is unconnected for instance 'psiface' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Wrapper.v:40]
+WARNING: [Synth 8-7071] port 'write_data' of module 'Ps2Interface' is unconnected for instance 'psiface' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Wrapper.v:40]
+WARNING: [Synth 8-7071] port 'busy' of module 'Ps2Interface' is unconnected for instance 'psiface' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Wrapper.v:40]
+WARNING: [Synth 8-7071] port 'err' of module 'Ps2Interface' is unconnected for instance 'psiface' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Wrapper.v:40]
+WARNING: [Synth 8-7023] instance 'psiface' of module 'Ps2Interface' has 10 connections declared, but only 5 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Wrapper.v:40]
+INFO: [Synth 8-6157] synthesizing module 'VGATimingGenerator' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/VGATimingGenerator.v:2]
+	Parameter HEIGHT bound to: 480 - type: integer 
+	Parameter WIDTH bound to: 640 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'VGATimingGenerator' (2#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/VGATimingGenerator.v:2]
+INFO: [Synth 8-6157] synthesizing module 'RAM_VGA' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/RAM_VGA.v:2]
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 20 - type: integer 
+	Parameter DEPTH bound to: 307200 - type: integer 
+	Parameter MEMFILE bound to: image.mem - type: string 
+INFO: [Synth 8-3876] $readmem data file 'image.mem' is read successfully [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/RAM_VGA.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM_VGA' (3#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/RAM_VGA.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM_VGA' is unconnected for instance 'ImageData' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Wrapper.v:93]
+WARNING: [Synth 8-7023] instance 'ImageData' of module 'RAM_VGA' has 5 connections declared, but only 4 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Wrapper.v:93]
+INFO: [Synth 8-6157] synthesizing module 'RAM_VGA__parameterized0' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/RAM_VGA.v:2]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter MEMFILE bound to: colors.mem - type: string 
+INFO: [Synth 8-3876] $readmem data file 'colors.mem' is read successfully [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/RAM_VGA.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'RAM_VGA__parameterized0' (3#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/RAM_VGA.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM_VGA' is unconnected for instance 'ColorPalette' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Wrapper.v:107]
+WARNING: [Synth 8-7023] instance 'ColorPalette' of module 'RAM_VGA' has 5 connections declared, but only 4 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Wrapper.v:107]
+INFO: [Synth 8-6157] synthesizing module 'processor' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:20]
+INFO: [Synth 8-6157] synthesizing module 'register' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/register.v:1]
+INFO: [Synth 8-6157] synthesizing module 'dffe_ref' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/dffe_ref.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'dffe_ref' (4#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/dffe_ref.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'register' (5#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/register.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/alu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'op_decode' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/op_decode.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'op_decode' (6#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/op_decode.v:1]
+INFO: [Synth 8-6157] synthesizing module 'cla_32' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/cla_32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'cla_combinational_32' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/cla_combinational_32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'cla_combinational_32' (7#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/cla_combinational_32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'cla_4' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/cla_4.v:1]
+INFO: [Synth 8-6157] synthesizing module 'cla_combinational_4' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/cla_combinational_4.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'cla_combinational_4' (8#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/cla_combinational_4.v:1]
+INFO: [Synth 8-6157] synthesizing module 'full_adder' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/full_adder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'full_adder' (9#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/full_adder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'cla_4' (10#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/cla_4.v:1]
+INFO: [Synth 8-6157] synthesizing module 'and_32' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/and_32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'and_32' (11#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/and_32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'cla_32' (12#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/cla_32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'cls_32' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/cls_32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'not_32' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/not_32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'not_32' (13#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/not_32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'cls_32' (14#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/cls_32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'or_32' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/or_32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'or_32' (15#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/or_32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sll' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/sll.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_32' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mux_32.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_8' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mux_8.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_4' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mux_4.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_2' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mux_2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_2' (16#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mux_2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_4' (17#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mux_4.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_8' (18#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mux_8.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_32' (19#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mux_32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sll' (20#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/sll.v:1]
+INFO: [Synth 8-6157] synthesizing module 'sra' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/sra.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sra' (21#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/sra.v:1]
+INFO: [Synth 8-6157] synthesizing module 'or_32_input' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/or_32_input.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'or_32_input' (22#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/or_32_input.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (23#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/alu.v:1]
+WARNING: [Synth 8-7071] port 'ctrl_shiftamt' of module 'alu' is unconnected for instance 'get_next_pc' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:82]
+WARNING: [Synth 8-7071] port 'isNotEqual' of module 'alu' is unconnected for instance 'get_next_pc' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:82]
+WARNING: [Synth 8-7071] port 'isLessThan' of module 'alu' is unconnected for instance 'get_next_pc' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:82]
+WARNING: [Synth 8-7071] port 'overflow' of module 'alu' is unconnected for instance 'get_next_pc' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:82]
+WARNING: [Synth 8-7023] instance 'get_next_pc' of module 'alu' has 8 connections declared, but only 4 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:82]
+INFO: [Synth 8-6157] synthesizing module 'mux_8_5' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mux_8_5.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_4_5' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mux_4_5.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mux_2_5' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mux_2_5.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_2_5' (24#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mux_2_5.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_4_5' (25#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mux_4_5.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_8_5' (26#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mux_8_5.v:1]
+WARNING: [Synth 8-7071] port 'in3' of module 'mux_8_5' is unconnected for instance 'getBMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:117]
+WARNING: [Synth 8-7071] port 'in4' of module 'mux_8_5' is unconnected for instance 'getBMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:117]
+WARNING: [Synth 8-7071] port 'in5' of module 'mux_8_5' is unconnected for instance 'getBMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:117]
+WARNING: [Synth 8-7071] port 'in6' of module 'mux_8_5' is unconnected for instance 'getBMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:117]
+WARNING: [Synth 8-7071] port 'in7' of module 'mux_8_5' is unconnected for instance 'getBMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:117]
+WARNING: [Synth 8-7023] instance 'getBMux' of module 'mux_8_5' has 10 connections declared, but only 5 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:117]
+INFO: [Synth 8-6157] synthesizing module 'extender_target' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/extender_target.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'extender_target' (27#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/extender_target.v:1]
+INFO: [Synth 8-6157] synthesizing module 'extender' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/extender.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'extender' (28#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/extender.v:1]
+WARNING: [Synth 8-7071] port 'ctrl_shiftamt' of module 'alu' is unconnected for instance 'addtopcimmed' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:159]
+WARNING: [Synth 8-7071] port 'isNotEqual' of module 'alu' is unconnected for instance 'addtopcimmed' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:159]
+WARNING: [Synth 8-7071] port 'isLessThan' of module 'alu' is unconnected for instance 'addtopcimmed' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:159]
+WARNING: [Synth 8-7071] port 'overflow' of module 'alu' is unconnected for instance 'addtopcimmed' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:159]
+WARNING: [Synth 8-7023] instance 'addtopcimmed' of module 'alu' has 8 connections declared, but only 4 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:159]
+WARNING: [Synth 8-7071] port 'ctrl_shiftamt' of module 'alu' is unconnected for instance 'addtopcimmed2' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:161]
+WARNING: [Synth 8-7071] port 'isNotEqual' of module 'alu' is unconnected for instance 'addtopcimmed2' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:161]
+WARNING: [Synth 8-7071] port 'isLessThan' of module 'alu' is unconnected for instance 'addtopcimmed2' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:161]
+WARNING: [Synth 8-7071] port 'overflow' of module 'alu' is unconnected for instance 'addtopcimmed2' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:161]
+WARNING: [Synth 8-7023] instance 'addtopcimmed2' of module 'alu' has 8 connections declared, but only 4 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:161]
+WARNING: [Synth 8-7071] port 'in3' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in4' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in5' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in6' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in7' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in8' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in9' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in10' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in11' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in12' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in13' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in14' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in15' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in16' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in17' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in18' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in19' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in20' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in21' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in22' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in23' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in24' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in25' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in26' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in27' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in28' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in29' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in30' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'in31' of module 'mux_32' is unconnected for instance 'toRdBranchMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7023] instance 'toRdBranchMux' of module 'mux_32' has 34 connections declared, but only 5 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:173]
+WARNING: [Synth 8-7071] port 'ctrl_shiftamt' of module 'alu' is unconnected for instance 'rs_minus_rd_alu' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:175]
+WARNING: [Synth 8-7071] port 'isNotEqual' of module 'alu' is unconnected for instance 'rs_minus_rd_alu' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:175]
+WARNING: [Synth 8-7071] port 'isLessThan' of module 'alu' is unconnected for instance 'rs_minus_rd_alu' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:175]
+WARNING: [Synth 8-7071] port 'overflow' of module 'alu' is unconnected for instance 'rs_minus_rd_alu' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:175]
+WARNING: [Synth 8-7023] instance 'rs_minus_rd_alu' of module 'alu' has 8 connections declared, but only 4 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:175]
+WARNING: [Synth 8-7071] port 'in3' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in4' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in5' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in6' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in7' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in8' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in9' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in10' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in11' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in12' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in13' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in14' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in15' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in16' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in17' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in18' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in19' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in20' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in21' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in22' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in23' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in24' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in25' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in26' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in27' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in28' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in29' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in30' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in31' of module 'mux_32' is unconnected for instance 'toJRMux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7023] instance 'toJRMux' of module 'mux_32' has 34 connections declared, but only 5 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:217]
+WARNING: [Synth 8-7071] port 'in3' of module 'mux_32' is unconnected for instance 'pcmux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:223]
+WARNING: [Synth 8-7071] port 'in5' of module 'mux_32' is unconnected for instance 'pcmux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:223]
+WARNING: [Synth 8-7071] port 'in6' of module 'mux_32' is unconnected for instance 'pcmux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:223]
+WARNING: [Synth 8-7071] port 'in7' of module 'mux_32' is unconnected for instance 'pcmux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:223]
+WARNING: [Synth 8-7071] port 'in8' of module 'mux_32' is unconnected for instance 'pcmux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:223]
+WARNING: [Synth 8-7071] port 'in9' of module 'mux_32' is unconnected for instance 'pcmux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:223]
+WARNING: [Synth 8-7071] port 'in10' of module 'mux_32' is unconnected for instance 'pcmux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:223]
+WARNING: [Synth 8-7071] port 'in11' of module 'mux_32' is unconnected for instance 'pcmux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:223]
+WARNING: [Synth 8-7071] port 'in12' of module 'mux_32' is unconnected for instance 'pcmux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:223]
+WARNING: [Synth 8-7071] port 'in13' of module 'mux_32' is unconnected for instance 'pcmux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:223]
+WARNING: [Synth 8-7071] port 'in14' of module 'mux_32' is unconnected for instance 'pcmux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:223]
+WARNING: [Synth 8-7071] port 'in15' of module 'mux_32' is unconnected for instance 'pcmux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:223]
+WARNING: [Synth 8-7071] port 'in16' of module 'mux_32' is unconnected for instance 'pcmux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:223]
+WARNING: [Synth 8-7071] port 'in17' of module 'mux_32' is unconnected for instance 'pcmux' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:223]
+INFO: [Common 17-14] Message 'Synth 8-7071' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7023] instance 'pcmux' of module 'mux_32' has 34 connections declared, but only 6 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:223]
+WARNING: [Synth 8-7023] instance 'toAluAMux' of module 'mux_32' has 34 connections declared, but only 7 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:248]
+WARNING: [Synth 8-7023] instance 'toAluBMux' of module 'mux_32' has 34 connections declared, but only 7 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:276]
+INFO: [Synth 8-6157] synthesizing module 'multdiv' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/multdiv.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mult' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mult.v:1]
+INFO: [Synth 8-6157] synthesizing module 'negate' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/negate.v:1]
+WARNING: [Synth 8-7023] instance 'adder' of module 'alu' has 8 connections declared, but only 4 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/negate.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'negate' (29#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/negate.v:1]
+INFO: [Synth 8-6157] synthesizing module 'control' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'tff16' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/tff16.v:1]
+INFO: [Synth 8-6157] synthesizing module 'tff' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/tff.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'tff' (30#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/tff.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'tff16' (31#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/tff16.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'control' (32#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/control.v:1]
+WARNING: [Synth 8-7023] instance 'mux1' of module 'mux_32' has 34 connections declared, but only 7 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mult.v:37]
+WARNING: [Synth 8-7023] instance 'adder' of module 'alu' has 8 connections declared, but only 4 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mult.v:41]
+INFO: [Synth 8-6157] synthesizing module 'rrd_shift' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/rrd_shift.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'rrd_shift' (33#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/rrd_shift.v:1]
+WARNING: [Synth 8-7023] instance 'mux68' of module 'mux_32' has 34 connections declared, but only 7 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mult.v:76]
+INFO: [Synth 8-6155] done synthesizing module 'mult' (34#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/mult.v:1]
+INFO: [Synth 8-6157] synthesizing module 'dffe_cus' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/dffe_cus.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'dffe_cus' (35#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/dffe_cus.v:1]
+INFO: [Synth 8-6157] synthesizing module 'div' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/div.v:1]
+INFO: [Synth 8-6157] synthesizing module 'tff32' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/tff32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'tff32' (36#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/tff32.v:1]
+WARNING: [Synth 8-7023] instance 'adder' of module 'alu' has 8 connections declared, but only 4 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/div.v:35]
+WARNING: [Synth 8-7023] instance 'adder2' of module 'alu' has 8 connections declared, but only 4 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/div.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'div' (37#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/div.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'multdiv' (38#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/multdiv.v:1]
+WARNING: [Synth 8-7023] instance 'alu_unit' of module 'alu' has 8 connections declared, but only 6 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:344]
+WARNING: [Synth 8-7023] instance 'getStatus_x' of module 'mux_32' has 34 connections declared, but only 8 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:372]
+WARNING: [Synth 8-7023] instance 'dataB_reg_xm_latch' of module 'register' has 5 connections declared, but only 4 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:398]
+WARNING: [Synth 8-7023] instance 'getStatus' of module 'mux_32' has 34 connections declared, but only 8 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:433]
+WARNING: [Synth 8-7023] instance 'ctrlWriteRegMux' of module 'mux_8_5' has 10 connections declared, but only 5 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:439]
+WARNING: [Synth 8-7023] instance 'addtopc' of module 'alu' has 8 connections declared, but only 4 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:451]
+WARNING: [Synth 8-7023] instance 'data_writeRegmux' of module 'mux_32' has 34 connections declared, but only 7 given [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:452]
+INFO: [Synth 8-6155] done synthesizing module 'processor' (39#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/processor.v:20]
+INFO: [Synth 8-6157] synthesizing module 'ROM' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/ROM.v:2]
+	Parameter MEMFILE bound to: 56'b01101110011011110111000000101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file 'nop.mem' is read successfully [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/ROM.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'ROM' (40#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/ROM.v:2]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/regfile.v:1]
+INFO: [Synth 8-6157] synthesizing module 'decode' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/decode.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'decode' (41#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/decode.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (42#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Components/regfile.v:1]
+INFO: [Synth 8-6157] synthesizing module 'RAM' [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/RAM.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'RAM' (43#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/RAM.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Wrapper' (44#1) [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/cp4-processor/processor/Wrapper.v:27]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1425.902 ; gain = 96.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1425.902 ; gain = 96.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1425.902 ; gain = 96.840
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1425.902 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc]
+WARNING: [Vivado 12-507] No nets matched 'BTNL_IBUF'. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_HS'. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:151]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:151]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_VS'. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:152]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:152]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hSync'. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:197]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:197]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vSync'. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:198]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:198]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hSync'. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:199]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:199]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vSync'. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:200]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:200]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1654.078 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 1654.078 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1654.078 ; gain = 325.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1654.078 ; gain = 325.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1654.078 ; gain = 325.016
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Ps2Interface'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                00000000000000001 |                            00000
+            rx_down_edge |                00000000000000010 |                            00011
+                rx_clk_l |                00000000000000100 |                            00010
+                rx_clk_h |                00000000000001000 |                            00001
+         rx_error_parity |                00000000000010000 |                            00100
+           rx_data_ready |                00000000000100000 |                            00101
+          tx_force_clk_l |                00000000001000000 |                            00110
+      tx_bring_data_down |                00000000010000000 |                            00111
+          tx_release_clk |                00000000100000000 |                            01000
+ tx_first_wait_down_edge |                00000001000000000 |                            01001
+                tx_clk_l |                00000010000000000 |                            01010
+         tx_wait_up_edge |                00000100000000000 |                            01011
+tx_wait_up_edge_before_ack |                00001000000000000 |                            01101
+             tx_wait_ack |                00010000000000000 |                            01110
+         tx_received_ack |                00100000000000000 |                            01111
+         tx_error_no_ack |                01000000000000000 |                            10000
+                tx_clk_h |                10000000000000000 |                            01100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Ps2Interface'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1654.078 ; gain = 325.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 3     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1353  
+	   3 Input      1 Bit         XORs := 1344  
++---Registers : 
+	               32 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 1504  
++---RAMs : 
+	            2700K Bit	(307200 X 9 bit)          RAMs := 1     
+	             128K Bit	(4096 X 32 bit)          RAMs := 1     
+	               3K Bit	(256 X 12 bit)          RAMs := 1     
++---ROMs : 
+	                    ROMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1212  
+	  17 Input   17 Bit        Muxes := 1     
+	   2 Input   17 Bit        Muxes := 18    
+	   2 Input   11 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 15    
+	   2 Input    1 Bit        Muxes := 9     
+	  17 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP imgAddress, operation Mode is: (C or 0)+(A:0x280)*B.
+DSP Report: operator imgAddress is absorbed into DSP imgAddress.
+DSP Report: operator imgAddress0 is absorbed into DSP imgAddress.
+DSP Report: operator imgAddress is absorbed into DSP imgAddress.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1654.078 ; gain = 325.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+---------------------+---------------+----------------+
+|Module Name | RTL Object          | Depth x Width | Implemented As | 
++------------+---------------------+---------------+----------------+
+|Wrapper     | InstMem/dataOut_reg | 4096x2        | Block RAM      | 
++------------+---------------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping Report (see note below)
++-------------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name              | RTL Object      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|RAM_VGA:                 | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|RAM_VGA__parameterized0: | MemoryArray_reg | 256 x 12(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
++-------------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below)
++------------+----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping          | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Wrapper     | (C or 0)+(A:0x280)*B | 9      | 10     | 10     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++------------+----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1654.078 ; gain = 325.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1654.078 ; gain = 325.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-------------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name              | RTL Object      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|RAM_VGA:                 | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|RAM_VGA__parameterized0: | MemoryArray_reg | 256 x 12(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
++-------------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_3_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_3_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_3_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_3_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_5_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_5_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_5_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_5_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_5_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_5_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_5_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_5_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_7_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_7_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_7_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_7_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_7_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_7_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_7_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_7_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_9_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_9_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_9_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_9_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_9_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_9_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_9_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_9_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ColorPalette/MemoryArray_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance InstMem/dataOut_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1654.078 ; gain = 325.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 1654.078 ; gain = 325.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 1654.078 ; gain = 325.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 1654.078 ; gain = 325.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 1654.078 ; gain = 325.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 1654.078 ; gain = 325.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 1654.078 ; gain = 325.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     2|
+|2     |DSP48E1  |     1|
+|3     |LUT1     |     8|
+|4     |LUT2     |     4|
+|5     |LUT3     |    24|
+|6     |LUT4     |    20|
+|7     |LUT5     |    18|
+|8     |LUT6     |    48|
+|9     |MUXF7    |     8|
+|10    |RAMB18E1 |     2|
+|12    |RAMB36E1 |    80|
+|24    |FDCE     |    34|
+|25    |FDRE     |    42|
+|26    |IBUF     |     3|
+|27    |IOBUF    |     2|
+|28    |OBUF     |    19|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 1654.078 ; gain = 325.016
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:44 . Memory (MB): peak = 1654.078 ; gain = 96.840
+Synthesis Optimization Complete : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 1654.078 ; gain = 325.016
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1654.078 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 93 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1654.078 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+Synth Design complete, checksum: 8f32a7df
+INFO: [Common 17-83] Releasing license: Synthesis
+153 Infos, 171 Warnings, 7 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 1654.078 ; gain = 325.016
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Processor/FP_AlexPenne.runs/synth_1/Wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Wrapper_utilization_synth.rpt -pb Wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  3 15:17:59 2024...
