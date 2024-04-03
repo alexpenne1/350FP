@@ -109,17 +109,17 @@ read_mem {
   {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/blt_test.mem}
   {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/byp_from_m.mem}
   {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/jump_test.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/sprites.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/ascii.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/image.mem}
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/colors.mem}
   {C:/Users/adp69/Documents/350FP/Copy of ece350-assembler-windows/nop.mem}
+  C:/Users/adp69/Documents/350FP/VGAFiles/sprites.mem
+  C:/Users/adp69/Documents/350FP/VGAFiles/colors.mem
+  C:/Users/adp69/Documents/350FP/VGAFiles/ascii.mem
+  C:/Users/adp69/Documents/350FP/VGAFiles/image.mem
 }
 read_verilog -library xil_defaultlib {
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/RAM.v
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/RAM_VGA.v}
+  C:/Users/adp69/Documents/350FP/VGAFiles/RAM_VGA.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/ROM.v
-  {C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/VGATimingGenerator.v}
+  C:/Users/adp69/Documents/350FP/VGAFiles/VGATimingGenerator.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/alu.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/and_32.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/cla_32.v
@@ -160,7 +160,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/tff32.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v
 }
-read_vhdl -library xil_defaultlib {{C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab6/lab6-7_kit/lab6_kit/Ps2Interface.vhd}}
+read_vhdl -library xil_defaultlib C:/Users/adp69/Documents/350FP/VGAFiles/Ps2Interface.vhd
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
