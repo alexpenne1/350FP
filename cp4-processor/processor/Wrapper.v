@@ -24,9 +24,9 @@
  *
  **/
 
-module Wrapper (LED, BTNL, CLK100MHZ, CPU_RESETN, VGA_R, VGA_B, VGA_G, ps2_clk, ps2_data, hSync, vSync);
+module Wrapper (LED, BTNL, CLK100MHZ, CPU_RESETN, VGA_R, VGA_B, VGA_G, ps2_clk, ps2_data, hSync, vSync, BTNR, BTNU, BTND);
 	input CLK100MHZ;
-	input BTNL, CPU_RESETN;
+	input BTNL, BTNU, BTNR, BTND, CPU_RESETN;
 	output[3:0] VGA_R;  // Red Signal Bits
 	output[3:0] VGA_G;  // Green Signal Bits
 	output[3:0] VGA_B;  // Blue Signal Bits
@@ -34,6 +34,61 @@ module Wrapper (LED, BTNL, CLK100MHZ, CPU_RESETN, VGA_R, VGA_B, VGA_G, ps2_clk, 
 	inout ps2_clk;
 	inout ps2_data;
 	output [15:0] LED;
+	
+	/* VGA SELECT GATE */
+	reg [4:0] gate_select = 5'd1;
+	
+	/* Move Right */
+	always @(posedge BTNR) begin
+	   if (gate_select == 5'd8) begin
+	       gate_select = 5'd1;
+	   end else if (gate_select == 5'd16) begin
+	       gate_select = 5'd9;
+	   end else if (gate_select == 5'd18) begin
+	       gate_select = 5'd17;
+	   end else begin
+	       gate_select = gate_select +1;
+	   end
+	end
+	
+	/* Move Left */
+	always @(posedge BTNL) begin
+	   if (gate_select == 5'd1) begin
+	       gate_select = 5'd8;
+	   end else if (gate_select == 5'd9) begin
+	       gate_select = 5'd16;
+	   end else if (gate_select == 5'd17) begin
+	       gate_select = 5'd18;
+	   end else begin
+	       gate_select = gate_select -1;
+	   end
+	end
+	
+	/* Move Up */
+	always @(posedge BTNU) begin
+	   if (gate_select == 5'd17) begin
+	       gate_select = 5'd10;
+	   end else if (gate_select == 5'd18) begin
+	       gate_select = 5'd15;
+	   end else if (gate_select > 8 && gate_select < 17) begin
+	       gate_select = gate_select - 8;
+	   end
+	end
+	
+	/* Move Down */
+	always @(posedge BTND) begin
+	   if (gate_select > 8 && gate_select < 13) begin
+	       gate_select = 5'd17;
+	   end else if (gate_select > 12 && gate_select < 17) begin
+	       gate_select = 5'd18;
+	   end else if (gate_select > 0 && gate_select < 9) begin
+	       gate_select = gate_select + 8;
+	   end
+	end
+	
+	/* MAP GATE SELECT TO CENTER BIT, MAKE BORDER */
+	
+	
 	
 	/* VGA SCREEN */
 	wire [7:0] rx_data;

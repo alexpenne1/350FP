@@ -111,8 +111,8 @@ read_mem {
   {C:/Users/adp69/Documents/350FP/cp4-processor/processor/Test Files/Memory Files/jump_test.mem}
   {C:/Users/adp69/Documents/350FP/Copy of ece350-assembler-windows/nop.mem}
   C:/Users/adp69/Documents/350FP/VGAFiles/sprites.mem
-  C:/Users/adp69/Documents/350FP/VGAFiles/colors.mem
   C:/Users/adp69/Documents/350FP/VGAFiles/ascii.mem
+  C:/Users/adp69/Documents/350FP/VGAFiles/colors.mem
   C:/Users/adp69/Documents/350FP/VGAFiles/image.mem
 }
 read_verilog -library xil_defaultlib {
