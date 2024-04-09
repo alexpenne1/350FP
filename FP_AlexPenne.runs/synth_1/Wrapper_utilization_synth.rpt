@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Tue Apr  9 15:12:01 2024
+| Date         : Tue Apr  9 15:30:48 2024
 | Host         : P1-05 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Wrapper_utilization_synth.rpt -pb Wrapper_utilization_synth.pb
 | Design       : Wrapper
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             | 1715 |     0 |          0 |     63400 |  2.71 |
-|   LUT as Logic          | 1715 |     0 |          0 |     63400 |  2.71 |
+| Slice LUTs*             | 1716 |     0 |          0 |     63400 |  2.71 |
+|   LUT as Logic          | 1716 |     0 |          0 |     63400 |  2.71 |
 |   LUT as Memory         |    0 |     0 |          0 |     19000 |  0.00 |
 | Slice Registers         |  586 |     0 |          0 |    126800 |  0.46 |
 |   Register as Flip Flop |  572 |     0 |          0 |    126800 |  0.45 |
@@ -150,10 +150,10 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | LUT6     |  790 |                 LUT |
-| LUT5     |  409 |                 LUT |
+| LUT5     |  407 |                 LUT |
 | FDCE     |  383 |        Flop & Latch |
 | LUT4     |  333 |                 LUT |
-| LUT2     |  252 |                 LUT |
+| LUT2     |  253 |                 LUT |
 | FDRE     |  187 |        Flop & Latch |
 | LUT3     |  112 |                 LUT |
 | RAMB36E1 |   81 |        Block Memory |

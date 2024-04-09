@@ -558,8 +558,8 @@ module Wrapper (LED, BTNL, CLK100MHZ, CPU_RESETN, VGA_R, VGA_B, VGA_G, ps2_clk, 
 	
 	
 	
-	assign LED[9:0] = instAddr[9:0];
-	
+	assign LED[4:0] = instAddr[9:0];
+	assign LED[9:5] = regToWrite;
 	wire[31:0] reg1_value;
 	assign LED[14:10] = reg1_value[4:0];
 	dffe_ref reg1_latch_1(.q(reg1_value[0]), .d(dataToWrite[0]), .en((regToWrite==5'd6)), .clr(1'b0), .clk(clock));

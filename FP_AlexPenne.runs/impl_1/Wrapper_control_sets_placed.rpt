@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Tue Apr  9 15:12:45 2024
+| Date         : Tue Apr  9 15:31:32 2024
 | Host         : P1-05 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Wrapper_control_sets_placed.rpt
 | Design       : Wrapper
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |    26 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    97 |
+| Unused register locations in slices containing registers |    92 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -41,9 +41,9 @@ Table of Contents
 +--------------------+-------+
 | Total control sets |    26 |
 | >= 0 to < 4        |     4 |
-| >= 4 to < 6        |     6 |
+| >= 4 to < 6        |     5 |
 | >= 6 to < 8        |     1 |
-| >= 8 to < 10       |     0 |
+| >= 8 to < 10       |     1 |
 | >= 10 to < 12      |     3 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              75 |           33 |
-| No           | No                    | Yes                    |             149 |           84 |
-| No           | Yes                   | No                     |              14 |            8 |
-| Yes          | No                    | No                     |              15 |            6 |
-| Yes          | No                    | Yes                    |             170 |          122 |
-| Yes          | Yes                   | No                     |             104 |           49 |
+| No           | No                    | No                     |              76 |           34 |
+| No           | No                    | Yes                    |             149 |           73 |
+| No           | Yes                   | No                     |              18 |            8 |
+| Yes          | No                    | No                     |              15 |            5 |
+| Yes          | No                    | Yes                    |             170 |          114 |
+| Yes          | Yes                   | No                     |             104 |           48 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -75,30 +75,30 @@ Table of Contents
 +--------------------------+----------------------------------------------------+---------------------------------------------------------------+------------------+----------------+--------------+
 |  center_x_reg[9]_i_1_n_0 |                                                    | center_x_reg[9]_i_2_n_0                                       |                1 |              1 |         1.00 |
 |  center_x_reg[7]_i_1_n_0 |                                                    | center_x_reg[7]_i_2_n_0                                       |                1 |              2 |         2.00 |
-|  BTNC_IBUF_BUFG          |                                                    |                                                               |                1 |              3 |         3.00 |
-|  center_x_reg[9]_i_1_n_0 |                                                    | center_x_reg[8]_i_1_n_0                                       |                2 |              3 |         1.50 |
+|  BTNC_IBUF_BUFG          |                                                    |                                                               |                2 |              3 |         1.50 |
+|  center_x_reg[9]_i_1_n_0 |                                                    | center_x_reg[8]_i_1_n_0                                       |                1 |              3 |         3.00 |
 |  CLK100MHZ_IBUF_BUFG     | psiface/FSM_onehot_state_reg_n_0_[1]               | psiface/reset_bit_count                                       |                1 |              4 |         4.00 |
-|  LED_OBUF_BUFG[15]       |                                                    | regToWrite[3]                                                 |                2 |              4 |         2.00 |
 |  center_x_reg[7]_i_1_n_0 |                                                    | center_x_reg[6]_i_1_n_0                                       |                2 |              4 |         2.00 |
 |  center_y_reg[6]_i_2_n_0 |                                                    |                                                               |                3 |              4 |         1.33 |
-|  LED_OBUF_BUFG[15]       | reg1_latch_5/regToWrite_reg[4]                     |                                                               |                4 |              5 |         1.25 |
-|  clkSlow                 |                                                    |                                                               |                4 |              5 |         1.25 |
-|  LED_OBUF_BUFG[15]       |                                                    |                                                               |                3 |              6 |         2.00 |
+|  LED_OBUF_BUFG[15]       | reg1_latch_5/regToWrite_reg[4]                     |                                                               |                3 |              5 |         1.67 |
+|  clkSlow                 |                                                    |                                                               |                2 |              5 |         2.50 |
+|  LED_OBUF_BUFG[15]       |                                                    |                                                               |                5 |              7 |         1.40 |
+|  LED_OBUF_BUFG[15]       |                                                    | regToWrite[3]_i_1_n_0                                         |                3 |              8 |         2.67 |
 |  CLK100MHZ_IBUF_BUFG     | psiface/FSM_onehot_state_reg_n_0_[1]               |                                                               |                2 |             10 |         5.00 |
-|  clk25                   |                                                    | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |                6 |             10 |         1.67 |
+|  clk25                   |                                                    | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |                4 |             10 |         2.50 |
 |  clk25                   | Display/vPos                                       | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |                4 |             10 |         2.50 |
-|  BTNC_IBUF_BUFG          | gate_20                                            | gate_5_cy                                                     |                8 |             20 |         2.50 |
-|  BTNC_IBUF_BUFG          | gate_10                                            | gate_5_cy                                                     |                8 |             20 |         2.50 |
-|  BTNC_IBUF_BUFG          | gate_40                                            | gate_5_cy                                                     |               11 |             20 |         1.82 |
-|  BTNC_IBUF_BUFG          | gate_5[4]_i_1_n_0                                  | gate_5_cy                                                     |               12 |             20 |         1.67 |
-|  BTNC_IBUF_BUFG          | gate_30                                            | gate_5_cy                                                     |                9 |             20 |         2.22 |
-|  LED_OBUF_BUFG[15]       | CPU/INSN_reg_xm_latch/loop1[24].a_dffe/enableWR[1] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               25 |             32 |         1.28 |
-|  LED_OBUF_BUFG[15]       | CPU/INSN_reg_xm_latch/loop1[24].a_dffe/enableWR[6] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               23 |             32 |         1.39 |
-|  LED_OBUF_BUFG[15]       | CPU/INSN_reg_xm_latch/loop1[24].a_dffe/enableWR[0] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               25 |             32 |         1.28 |
-|  LED_OBUF_BUFG[15]       | CPU/INSN_reg_xm_latch/loop1[24].a_dffe/enableWR[3] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               23 |             32 |         1.39 |
-|  LED_OBUF_BUFG[15]       | CPU/INSN_reg_xm_latch/loop1[24].a_dffe/enableWR[2] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               22 |             32 |         1.45 |
+|  BTNC_IBUF_BUFG          | gate_10                                            | gate_5_cy                                                     |                9 |             20 |         2.22 |
+|  BTNC_IBUF_BUFG          | gate_20                                            | gate_5_cy                                                     |                9 |             20 |         2.22 |
+|  BTNC_IBUF_BUFG          | gate_30                                            | gate_5_cy                                                     |               10 |             20 |         2.00 |
+|  BTNC_IBUF_BUFG          | gate_40                                            | gate_5_cy                                                     |                8 |             20 |         2.50 |
+|  BTNC_IBUF_BUFG          | gate_5[4]_i_1_n_0                                  | gate_5_cy                                                     |               11 |             20 |         1.82 |
+|  LED_OBUF_BUFG[15]       | CPU/INSN_reg_xm_latch/loop1[24].a_dffe/enableWR[3] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               22 |             32 |         1.45 |
+|  LED_OBUF_BUFG[15]       | CPU/INSN_reg_xm_latch/loop1[24].a_dffe/enableWR[2] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               23 |             32 |         1.39 |
+|  LED_OBUF_BUFG[15]       | CPU/INSN_reg_xm_latch/loop1[24].a_dffe/enableWR[6] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               21 |             32 |         1.52 |
+|  LED_OBUF_BUFG[15]       | CPU/INSN_reg_xm_latch/loop1[24].a_dffe/enableWR[1] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               23 |             32 |         1.39 |
+|  LED_OBUF_BUFG[15]       | CPU/INSN_reg_xm_latch/loop1[24].a_dffe/enableWR[0] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               21 |             32 |         1.52 |
 |  CLK100MHZ_IBUF_BUFG     |                                                    |                                                               |               22 |             57 |         2.59 |
-| ~LED_OBUF_BUFG[15]       |                                                    | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               78 |            139 |         1.78 |
+| ~LED_OBUF_BUFG[15]       |                                                    | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               69 |            139 |         2.01 |
 +--------------------------+----------------------------------------------------+---------------------------------------------------------------+------------------+----------------+--------------+
 
 
