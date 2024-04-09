@@ -1,80 +1,80 @@
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\processor.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\RAM.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\ROM.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Wrapper.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Wrapper_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\alu.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\alu_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\and_32.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\and_32_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\cla.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\cla_32.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\cla_32_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\cla_4.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\cla_4_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\cla_combinational_32.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\cla_combinational_32_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\cla_combinational_4.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\cla_combinational_4_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\cls_32.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\cls_32_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\control.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\control_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\count16.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\count16_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\decode.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\decode_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\dffe_cus.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\dffe_custom.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\dffe_ref.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\div.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\div_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\extender.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\extender_target.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\full_adder.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\full_adder_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\less_than.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\less_than_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\mult.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\multdiv.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\multdiv_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\mult_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\mux_2.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\mux_2_5.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\mux_2_65bit.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\mux_32.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\mux_32_65bit.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\mux_32_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\mux_4.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\mux_4_5.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\mux_4_65bit.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\mux_8.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\mux_8_5.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\mux_8_65bit.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\my_alu_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\my_multdiv_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\negate.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\negate_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\not_32.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\not_32_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\op_decode.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\op_decode_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\or_32.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\or_32_input.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\or_32_input_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\or_32_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\regfile.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\regfile_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\register.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\register_custom.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\rrd_shift.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\rrd_shift_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\sll.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\sll_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\sra.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\sra_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\tff.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\tff16.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\tff16_tb.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\tff32.v
-C:\Users\adp69\OneDrive - Duke University\Senior\ECE350\Processor\cp4-processor\processor\Components\tristate.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\processor.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\RAM.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\ROM.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Wrapper.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Wrapper_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\alu.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\alu_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\and_32.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\and_32_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\cla.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\cla_32.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\cla_32_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\cla_4.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\cla_4_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\cla_combinational_32.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\cla_combinational_32_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\cla_combinational_4.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\cla_combinational_4_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\cls_32.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\cls_32_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\control.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\control_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\count16.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\count16_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\decode.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\decode_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\dffe_cus.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\dffe_custom.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\dffe_ref.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\div.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\div_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\extender.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\extender_target.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\full_adder.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\full_adder_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\less_than.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\less_than_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\mult.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\multdiv.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\multdiv_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\mult_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\mux_2.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\mux_2_5.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\mux_2_65bit.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\mux_32.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\mux_32_65bit.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\mux_32_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\mux_4.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\mux_4_5.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\mux_4_65bit.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\mux_8.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\mux_8_5.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\mux_8_65bit.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\my_alu_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\my_multdiv_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\negate.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\negate_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\not_32.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\not_32_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\op_decode.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\op_decode_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\or_32.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\or_32_input.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\or_32_input_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\or_32_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\regfile.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\regfile_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\register.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\register_custom.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\rrd_shift.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\rrd_shift_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\sll.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\sll_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\sra.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\sra_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\tff.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\tff16.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\tff16_tb.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\tff32.v
+C:\Users\adp69\Documents\350FP\cp4-processor\processor\Components\tristate.v

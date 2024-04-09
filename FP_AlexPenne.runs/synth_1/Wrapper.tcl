@@ -114,6 +114,8 @@ read_mem {
   C:/Users/adp69/Documents/350FP/VGAFiles/ascii.mem
   C:/Users/adp69/Documents/350FP/VGAFiles/colors.mem
   C:/Users/adp69/Documents/350FP/VGAFiles/image.mem
+  C:/Users/adp69/Documents/350FP/FPMem/change_reg1_test.mem
+  C:/Users/adp69/Documents/350FP/FPMem/matrixmult.mem
 }
 read_verilog -library xil_defaultlib {
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/RAM.v
@@ -128,8 +130,10 @@ read_verilog -library xil_defaultlib {
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/cla_combinational_4.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/cls_32.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/control.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/count16.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/decode.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/dffe_cus.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/dffe_custom.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/dffe_ref.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/div.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/extender.v
@@ -139,11 +143,15 @@ read_verilog -library xil_defaultlib {
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/multdiv.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/mux_2.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/mux_2_5.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/mux_2_65bit.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/mux_32.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/mux_32_65bit.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/mux_4.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/mux_4_5.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/mux_4_65bit.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/mux_8.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/mux_8_5.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/mux_8_65bit.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/negate.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/not_32.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/op_decode.v
@@ -152,6 +160,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/processor.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/regfile.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/register.v
+  C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/register_custom.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/rrd_shift.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/sll.v
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/sra.v

@@ -2,8 +2,8 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Fri Apr  5 15:39:13 2024
-# Process ID: 12936
+# Start of session at: Tue Apr  9 15:10:37 2024
+# Process ID: 4352
 # Current directory: C:/Users/adp69/Documents/350FP/FP_AlexPenne.runs/synth_1
 # Command line: vivado.exe -log Wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Wrapper.tcl
 # Log file: C:/Users/adp69/Documents/350FP/FP_AlexPenne.runs/synth_1/Wrapper.vds
@@ -17,7 +17,7 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 16564
+INFO: [Synth 8-7075] Helper process launched with PID 11444
 WARNING: [Synth 8-6901] identifier 'rd_d' is used before its declaration [C:/Users/adp69/Documents/350FP/cp4-processor/processor/processor.v:165]
 WARNING: [Synth 8-6901] identifier 'rd_x' is used before its declaration [C:/Users/adp69/Documents/350FP/cp4-processor/processor/processor.v:165]
 WARNING: [Synth 8-6901] identifier 'rd_d' is used before its declaration [C:/Users/adp69/Documents/350FP/cp4-processor/processor/processor.v:166]
@@ -56,23 +56,83 @@ WARNING: [Synth 8-6901] identifier 'rd_d_zero' is used before its declaration [C
 WARNING: [Synth 8-6901] identifier 'is_jal_m' is used before its declaration [C:/Users/adp69/Documents/350FP/cp4-processor/processor/processor.v:381]
 WARNING: [Synth 8-6901] identifier 'isLW' is used before its declaration [C:/Users/adp69/Documents/350FP/cp4-processor/processor/processor.v:392]
 WARNING: [Synth 8-6901] identifier 'rd' is used before its declaration [C:/Users/adp69/Documents/350FP/cp4-processor/processor/processor.v:392]
-WARNING: [Synth 8-992] reset is already implicitly declared earlier [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:171]
+WARNING: [Synth 8-992] reset is already implicitly declared earlier [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:574]
+WARNING: [Synth 8-992] regToWrite is already implicitly declared earlier [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:582]
+WARNING: [Synth 8-6901] identifier 'clkSlow' is used before its declaration [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:42]
+WARNING: [Synth 8-6901] identifier 'x' is used before its declaration [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:170]
+WARNING: [Synth 8-6901] identifier 'x' is used before its declaration [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:170]
+WARNING: [Synth 8-6901] identifier 'x' is used before its declaration [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:170]
+WARNING: [Synth 8-6901] identifier 'x' is used before its declaration [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:170]
+WARNING: [Synth 8-6901] identifier 'y' is used before its declaration [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:170]
+WARNING: [Synth 8-6901] identifier 'y' is used before its declaration [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:170]
+WARNING: [Synth 8-6901] identifier 'y' is used before its declaration [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:171]
+WARNING: [Synth 8-6901] identifier 'y' is used before its declaration [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:171]
+WARNING: [Synth 8-6901] identifier 'y' is used before its declaration [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:171]
+WARNING: [Synth 8-6901] identifier 'y' is used before its declaration [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:171]
+WARNING: [Synth 8-6901] identifier 'x' is used before its declaration [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:171]
+WARNING: [Synth 8-6901] identifier 'x' is used before its declaration [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:171]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1329.117 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1329.180 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Wrapper' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:27]
 INFO: [Synth 8-638] synthesizing module 'Ps2Interface' [C:/Users/adp69/Documents/350FP/VGAFiles/Ps2Interface.vhd:180]
 INFO: [Synth 8-256] done synthesizing module 'Ps2Interface' (1#1) [C:/Users/adp69/Documents/350FP/VGAFiles/Ps2Interface.vhd:180]
-WARNING: [Synth 8-7071] port 'rst' of module 'Ps2Interface' is unconnected for instance 'psiface' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:41]
-WARNING: [Synth 8-7071] port 'tx_data' of module 'Ps2Interface' is unconnected for instance 'psiface' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:41]
-WARNING: [Synth 8-7071] port 'write_data' of module 'Ps2Interface' is unconnected for instance 'psiface' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:41]
-WARNING: [Synth 8-7071] port 'busy' of module 'Ps2Interface' is unconnected for instance 'psiface' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:41]
-WARNING: [Synth 8-7071] port 'err' of module 'Ps2Interface' is unconnected for instance 'psiface' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:41]
-WARNING: [Synth 8-7023] instance 'psiface' of module 'Ps2Interface' has 10 connections declared, but only 5 given [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:41]
+WARNING: [Synth 8-7071] port 'rst' of module 'Ps2Interface' is unconnected for instance 'psiface' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:255]
+WARNING: [Synth 8-7071] port 'tx_data' of module 'Ps2Interface' is unconnected for instance 'psiface' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:255]
+WARNING: [Synth 8-7071] port 'write_data' of module 'Ps2Interface' is unconnected for instance 'psiface' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:255]
+WARNING: [Synth 8-7071] port 'busy' of module 'Ps2Interface' is unconnected for instance 'psiface' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:255]
+WARNING: [Synth 8-7071] port 'err' of module 'Ps2Interface' is unconnected for instance 'psiface' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:255]
+WARNING: [Synth 8-7023] instance 'psiface' of module 'Ps2Interface' has 10 connections declared, but only 5 given [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:255]
 INFO: [Synth 8-6157] synthesizing module 'VGATimingGenerator' [C:/Users/adp69/Documents/350FP/VGAFiles/VGATimingGenerator.v:2]
 	Parameter HEIGHT bound to: 480 - type: integer 
 	Parameter WIDTH bound to: 640 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'VGATimingGenerator' (2#1) [C:/Users/adp69/Documents/350FP/VGAFiles/VGATimingGenerator.v:2]
+WARNING: [Synth 8-567] referenced signal 'isInA1Gate' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'gate_1' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'a1cx' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'y' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'a1cy' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'gate_1_cx' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'gate_1_cy' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'isInB1Gate' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'b1cx' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'b1cy' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'isInA2Gate' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'gate_2' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'a2cx' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'a2cy' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'gate_2_cx' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'gate_2_cy' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'isInB2Gate' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'b2cx' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'b2cy' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'isInA3Gate' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'gate_3' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'a3cx' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'a3cy' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'gate_3_cx' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'gate_3_cy' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'isInB3Gate' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'b3cx' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'b3cy' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'isInA4Gate' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'gate_4' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'a4cx' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'a4cy' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'gate_4_cx' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'gate_4_cy' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'isInB4Gate' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'b4cx' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'b4cy' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'isInA5Gate' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'gate_5' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'a5cx' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'a5cy' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'gate_5_cx' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'gate_5_cy' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'isInB5Gate' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'b5cx' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
+WARNING: [Synth 8-567] referenced signal 'b5cy' should be on the sensitivity list [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:346]
 INFO: [Synth 8-6157] synthesizing module 'RAM_VGA' [C:/Users/adp69/Documents/350FP/VGAFiles/RAM_VGA.v:2]
 	Parameter DATA_WIDTH bound to: 9 - type: integer 
 	Parameter ADDRESS_WIDTH bound to: 20 - type: integer 
@@ -80,8 +140,8 @@ INFO: [Synth 8-6157] synthesizing module 'RAM_VGA' [C:/Users/adp69/Documents/350
 	Parameter MEMFILE bound to: image.mem - type: string 
 INFO: [Synth 8-3876] $readmem data file 'image.mem' is read successfully [C:/Users/adp69/Documents/350FP/VGAFiles/RAM_VGA.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'RAM_VGA' (3#1) [C:/Users/adp69/Documents/350FP/VGAFiles/RAM_VGA.v:2]
-WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM_VGA' is unconnected for instance 'ImageData' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:94]
-WARNING: [Synth 8-7023] instance 'ImageData' of module 'RAM_VGA' has 5 connections declared, but only 4 given [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:94]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM_VGA' is unconnected for instance 'ImageData' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:483]
+WARNING: [Synth 8-7023] instance 'ImageData' of module 'RAM_VGA' has 5 connections declared, but only 4 given [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:483]
 INFO: [Synth 8-6157] synthesizing module 'RAM_VGA__parameterized0' [C:/Users/adp69/Documents/350FP/VGAFiles/RAM_VGA.v:2]
 	Parameter DATA_WIDTH bound to: 12 - type: integer 
 	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
@@ -89,8 +149,8 @@ INFO: [Synth 8-6157] synthesizing module 'RAM_VGA__parameterized0' [C:/Users/adp
 	Parameter MEMFILE bound to: colors.mem - type: string 
 INFO: [Synth 8-3876] $readmem data file 'colors.mem' is read successfully [C:/Users/adp69/Documents/350FP/VGAFiles/RAM_VGA.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'RAM_VGA__parameterized0' (3#1) [C:/Users/adp69/Documents/350FP/VGAFiles/RAM_VGA.v:2]
-WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM_VGA' is unconnected for instance 'ColorPalette' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:108]
-WARNING: [Synth 8-7023] instance 'ColorPalette' of module 'RAM_VGA' has 5 connections declared, but only 4 given [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:108]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM_VGA' is unconnected for instance 'ColorPalette' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:497]
+WARNING: [Synth 8-7023] instance 'ColorPalette' of module 'RAM_VGA' has 5 connections declared, but only 4 given [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:497]
 INFO: [Synth 8-6157] synthesizing module 'RAM_VGA__parameterized1' [C:/Users/adp69/Documents/350FP/VGAFiles/RAM_VGA.v:2]
 	Parameter DATA_WIDTH bound to: 7 - type: integer 
 	Parameter ADDRESS_WIDTH bound to: 7 - type: integer 
@@ -98,8 +158,8 @@ INFO: [Synth 8-6157] synthesizing module 'RAM_VGA__parameterized1' [C:/Users/adp
 	Parameter MEMFILE bound to: ascii.mem - type: string 
 INFO: [Synth 8-3876] $readmem data file 'ascii.mem' is read successfully [C:/Users/adp69/Documents/350FP/VGAFiles/RAM_VGA.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'RAM_VGA__parameterized1' (3#1) [C:/Users/adp69/Documents/350FP/VGAFiles/RAM_VGA.v:2]
-WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM_VGA' is unconnected for instance 'Key' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:121]
-WARNING: [Synth 8-7023] instance 'Key' of module 'RAM_VGA' has 5 connections declared, but only 4 given [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:121]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM_VGA' is unconnected for instance 'Key' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:513]
+WARNING: [Synth 8-7023] instance 'Key' of module 'RAM_VGA' has 5 connections declared, but only 4 given [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:513]
 INFO: [Synth 8-6157] synthesizing module 'RAM_VGA__parameterized2' [C:/Users/adp69/Documents/350FP/VGAFiles/RAM_VGA.v:2]
 	Parameter DATA_WIDTH bound to: 1 - type: integer 
 	Parameter ADDRESS_WIDTH bound to: 19 - type: integer 
@@ -107,13 +167,13 @@ INFO: [Synth 8-6157] synthesizing module 'RAM_VGA__parameterized2' [C:/Users/adp
 	Parameter MEMFILE bound to: sprites.mem - type: string 
 INFO: [Synth 8-3876] $readmem data file 'sprites.mem' is read successfully [C:/Users/adp69/Documents/350FP/VGAFiles/RAM_VGA.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'RAM_VGA__parameterized2' (3#1) [C:/Users/adp69/Documents/350FP/VGAFiles/RAM_VGA.v:2]
-WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (19) of module 'RAM_VGA__parameterized2' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:141]
-WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM_VGA' is unconnected for instance 'Sprite' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:139]
-WARNING: [Synth 8-7023] instance 'Sprite' of module 'RAM_VGA' has 5 connections declared, but only 4 given [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:139]
-INFO: [Synth 8-6157] synthesizing module 'processor' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/processor.v:20]
-INFO: [Synth 8-6157] synthesizing module 'register' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/register.v:1]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (19) of module 'RAM_VGA__parameterized2' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:533]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM_VGA' is unconnected for instance 'Sprite' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:531]
+WARNING: [Synth 8-7023] instance 'Sprite' of module 'RAM_VGA' has 5 connections declared, but only 4 given [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:531]
 INFO: [Synth 8-6157] synthesizing module 'dffe_ref' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/dffe_ref.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'dffe_ref' (4#1) [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/dffe_ref.v:1]
+INFO: [Synth 8-6157] synthesizing module 'processor' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/processor.v:20]
+INFO: [Synth 8-6157] synthesizing module 'register' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/register.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'register' (5#1) [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/register.v:1]
 INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/alu.v:1]
 INFO: [Synth 8-6157] synthesizing module 'op_decode' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/op_decode.v:1]
@@ -298,8 +358,8 @@ WARNING: [Synth 8-7023] instance 'addtopc' of module 'alu' has 8 connections dec
 WARNING: [Synth 8-7023] instance 'data_writeRegmux' of module 'mux_32' has 34 connections declared, but only 7 given [C:/Users/adp69/Documents/350FP/cp4-processor/processor/processor.v:452]
 INFO: [Synth 8-6155] done synthesizing module 'processor' (39#1) [C:/Users/adp69/Documents/350FP/cp4-processor/processor/processor.v:20]
 INFO: [Synth 8-6157] synthesizing module 'ROM' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/ROM.v:2]
-	Parameter MEMFILE bound to: 96'b011000010110010001100100010111110111010001100101011100110111010000101110011011010110010101101101 
-INFO: [Synth 8-3876] $readmem data file 'add_test.mem' is read successfully [C:/Users/adp69/Documents/350FP/cp4-processor/processor/ROM.v:11]
+	Parameter MEMFILE bound to: 112'b0110110101100001011101000111001001101001011110000110110101110101011011000111010000101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file 'matrixmult.mem' is read successfully [C:/Users/adp69/Documents/350FP/cp4-processor/processor/ROM.v:11]
 INFO: [Synth 8-6155] done synthesizing module 'ROM' (40#1) [C:/Users/adp69/Documents/350FP/cp4-processor/processor/ROM.v:2]
 INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/regfile.v:1]
 INFO: [Synth 8-6157] synthesizing module 'decode' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Components/decode.v:1]
@@ -309,18 +369,18 @@ INFO: [Synth 8-6157] synthesizing module 'RAM' [C:/Users/adp69/Documents/350FP/c
 INFO: [Synth 8-6155] done synthesizing module 'RAM' (43#1) [C:/Users/adp69/Documents/350FP/cp4-processor/processor/RAM.v:2]
 INFO: [Synth 8-6155] done synthesizing module 'Wrapper' (44#1) [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:27]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1529.621 ; gain = 200.504
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1544.496 ; gain = 215.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1529.621 ; gain = 200.504
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1544.496 ; gain = 215.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1529.621 ; gain = 200.504
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1544.496 ; gain = 215.316
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1529.621 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1544.496 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -329,37 +389,40 @@ Parsing XDC File [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/l
 WARNING: [Vivado 12-507] No nets matched 'BTNL_IBUF'. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:10]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:10]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'VGA_HS'. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:151]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:151]
+WARNING: [Vivado 12-507] No nets matched 'BTNC_IBUF'. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:11]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'VGA_VS'. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:152]
+WARNING: [Vivado 12-584] No ports matched 'VGA_HS'. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:152]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:152]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_VS'. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:153]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc:153]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/adp69/OneDrive - Duke University/Senior/ECE350/Lab3/lab-3-starter/lab-3-master/master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1701.484 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1714.445 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.079 . Memory (MB): peak = 1701.484 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 1714.445 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1701.484 ; gain = 372.367
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1714.445 ; gain = 385.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1701.484 ; gain = 372.367
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1714.445 ; gain = 385.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1701.484 ; gain = 372.367
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1714.445 ; gain = 385.266
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Ps2Interface'
 ---------------------------------------------------------------------------------------------------
@@ -384,8 +447,10 @@ tx_wait_up_edge_before_ack |                00001000000000000 |                 
                 tx_clk_h |                10000000000000000 |                            01100
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Ps2Interface'
+WARNING: [Synth 8-327] inferring latch for variable 'center_y_reg' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:114]
+WARNING: [Synth 8-327] inferring latch for variable 'center_x_reg' [C:/Users/adp69/Documents/350FP/cp4-processor/processor/Wrapper.v:113]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1701.484 ; gain = 372.367
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1714.445 ; gain = 385.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -394,25 +459,30 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input   32 Bit       Adders := 7     
 	   2 Input   11 Bit       Adders := 1     
-	   2 Input   10 Bit       Adders := 2     
+	   2 Input   10 Bit       Adders := 4     
+	   3 Input   10 Bit       Adders := 7     
+	   2 Input    9 Bit       Adders := 4     
+	   3 Input    9 Bit       Adders := 10    
 	   2 Input    7 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 4     
 	   2 Input    4 Bit       Adders := 3     
 	   2 Input    2 Bit       Adders := 1     
 +---XORs : 
 	   2 Input      1 Bit         XORs := 1353  
 	   3 Input      1 Bit         XORs := 1344  
 +---Registers : 
-	               32 Bit    Registers := 1     
-	               18 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
 	               12 Bit    Registers := 1     
 	               11 Bit    Registers := 2     
-	               10 Bit    Registers := 2     
-	                9 Bit    Registers := 1     
+	               10 Bit    Registers := 7     
+	                9 Bit    Registers := 6     
 	                8 Bit    Registers := 1     
 	                7 Bit    Registers := 2     
-	                4 Bit    Registers := 3     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 7     
+	                4 Bit    Registers := 4     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 1505  
+	                1 Bit    Registers := 1510  
 +---Multipliers : 
 	              32x32  Multipliers := 2     
 +---RAMs : 
@@ -424,15 +494,35 @@ Detailed RTL Component Info :
 +---ROMs : 
 	                    ROMs := 1     
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 1212  
+	   2 Input   32 Bit        Muxes := 1213  
+	   2 Input   20 Bit        Muxes := 11    
 	  17 Input   17 Bit        Muxes := 1     
 	   2 Input   17 Bit        Muxes := 18    
+	   2 Input   12 Bit        Muxes := 1     
 	   2 Input   11 Bit        Muxes := 1     
-	   2 Input   10 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 3     
+	  17 Input   10 Bit        Muxes := 1     
+	  18 Input   10 Bit        Muxes := 1     
+	   7 Input   10 Bit        Muxes := 1     
 	   2 Input    9 Bit        Muxes := 1     
-	   2 Input    5 Bit        Muxes := 15    
-	   2 Input    1 Bit        Muxes := 9     
+	   2 Input    8 Bit        Muxes := 2     
+	  17 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 20    
+	   7 Input    5 Bit        Muxes := 1     
+	   4 Input    5 Bit        Muxes := 2     
+	   3 Input    5 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 21    
 	  17 Input    1 Bit        Muxes := 4     
+	   3 Input    1 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 3     
+	  18 Input    1 Bit        Muxes := 1     
+	   5 Input    1 Bit        Muxes := 1     
+	   6 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -448,9 +538,39 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-DSP Report: Generating DSP imgAddress, operation Mode is: C+(A:0x280)*B.
-DSP Report: operator imgAddress is absorbed into DSP imgAddress.
-DSP Report: operator imgAddress0 is absorbed into DSP imgAddress.
+DSP Report: Generating DSP curImgAddress0, operation Mode is: C+(A:0x280)*B.
+DSP Report: operator curImgAddress0 is absorbed into DSP curImgAddress0.
+DSP Report: operator curImgAddress1 is absorbed into DSP curImgAddress0.
+DSP Report: Generating DSP curImgAddress0, operation Mode is: C+(A:0x280)*B.
+DSP Report: operator curImgAddress0 is absorbed into DSP curImgAddress0.
+DSP Report: operator curImgAddress1 is absorbed into DSP curImgAddress0.
+DSP Report: Generating DSP curImgAddress0, operation Mode is: C+(A:0x280)*B.
+DSP Report: operator curImgAddress0 is absorbed into DSP curImgAddress0.
+DSP Report: operator curImgAddress1 is absorbed into DSP curImgAddress0.
+DSP Report: Generating DSP curImgAddress0, operation Mode is: C+(A:0x280)*B.
+DSP Report: operator curImgAddress0 is absorbed into DSP curImgAddress0.
+DSP Report: operator curImgAddress1 is absorbed into DSP curImgAddress0.
+DSP Report: Generating DSP curImgAddress0, operation Mode is: C+(A:0x280)*B.
+DSP Report: operator curImgAddress0 is absorbed into DSP curImgAddress0.
+DSP Report: operator curImgAddress1 is absorbed into DSP curImgAddress0.
+DSP Report: Generating DSP curImgAddress0, operation Mode is: C+(A:0x280)*B.
+DSP Report: operator curImgAddress0 is absorbed into DSP curImgAddress0.
+DSP Report: operator curImgAddress1 is absorbed into DSP curImgAddress0.
+DSP Report: Generating DSP curImgAddress0, operation Mode is: C+(A:0x280)*B.
+DSP Report: operator curImgAddress0 is absorbed into DSP curImgAddress0.
+DSP Report: operator curImgAddress1 is absorbed into DSP curImgAddress0.
+DSP Report: Generating DSP curImgAddress0, operation Mode is: C+(A:0x280)*B.
+DSP Report: operator curImgAddress0 is absorbed into DSP curImgAddress0.
+DSP Report: operator curImgAddress1 is absorbed into DSP curImgAddress0.
+DSP Report: Generating DSP curImgAddress0, operation Mode is: C+(A:0x280)*B.
+DSP Report: operator curImgAddress0 is absorbed into DSP curImgAddress0.
+DSP Report: operator curImgAddress1 is absorbed into DSP curImgAddress0.
+DSP Report: Generating DSP curImgAddress0, operation Mode is: C+(A:0x280)*B.
+DSP Report: operator curImgAddress0 is absorbed into DSP curImgAddress0.
+DSP Report: operator curImgAddress1 is absorbed into DSP curImgAddress0.
+DSP Report: Generating DSP curImgAddress0, operation Mode is: C+(A:0x280)*B.
+DSP Report: operator curImgAddress0 is absorbed into DSP curImgAddress0.
+DSP Report: operator curImgAddress1 is absorbed into DSP curImgAddress0.
 DSP Report: Generating DSP p_9_out, operation Mode is: C+(D+(A:0x3fffffff))*(B:0x9c4).
 DSP Report: operator p_9_out is absorbed into DSP p_9_out.
 DSP Report: operator p_8_in is absorbed into DSP p_9_out.
@@ -460,7 +580,7 @@ DSP Report: operator p_7_out is absorbed into DSP p_7_out.
 DSP Report: operator p_5_in is absorbed into DSP p_7_out.
 DSP Report: operator p_1_out is absorbed into DSP p_7_out.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1701.484 ; gain = 372.367
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 1714.445 ; gain = 385.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -470,7 +590,8 @@ ROM: Preliminary Mapping Report
 +------------+---------------------+---------------+----------------+
 |Module Name | RTL Object          | Depth x Width | Implemented As | 
 +------------+---------------------+---------------+----------------+
-|Wrapper     | InstMem/dataOut_reg | 4096x18       | Block RAM      | 
+|Wrapper     | InstMem/dataOut_reg | 4096x6        | Block RAM      | 
+|Wrapper     | p_0_out             | 32x10         | LUT            | 
 +------------+---------------------+---------------+----------------+
 
 
@@ -488,7 +609,17 @@ DSP: Preliminary Mapping Report (see note below)
 +------------+--------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name | DSP Mapping                    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------+--------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Wrapper     | C+(A:0x280)*B                  | 9      | 10     | 10     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Wrapper     | C+(A:0x280)*B                  | 9      | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Wrapper     | C+(A:0x280)*B                  | 9      | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Wrapper     | C+(A:0x280)*B                  | 9      | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Wrapper     | C+(A:0x280)*B                  | 9      | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Wrapper     | C+(A:0x280)*B                  | 9      | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Wrapper     | C+(A:0x280)*B                  | 9      | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Wrapper     | C+(A:0x280)*B                  | 9      | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Wrapper     | C+(A:0x280)*B                  | 9      | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Wrapper     | C+(A:0x280)*B                  | 9      | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Wrapper     | C+(A:0x280)*B                  | 9      | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Wrapper     | C+(A:0x280)*B                  | 9      | 10     | 10     | -      | 20     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 |Wrapper     | C+(D+(A:0x3fffffff))*(B:0x9c4) | 18     | 12     | 10     | 7      | 18     | 0    | 0    | 0    | 0    | 0     | 0    | 0    | 
 |Wrapper     | C+(D+A)*(B:0x32)               | 18     | 6      | 18     | 9      | 18     | 0    | 0    | 0    | 0    | 0     | 0    | 0    | 
 +------------+--------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
@@ -501,13 +632,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 1701.484 ; gain = 372.367
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 1714.445 ; gain = 385.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 1701.484 ; gain = 372.367
+Finished Timing Optimization : Time (s): cpu = 00:01:08 ; elapsed = 00:01:09 . Memory (MB): peak = 1714.445 ; gain = 385.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -568,8 +699,9 @@ INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_9_5 (
 INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_9_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_9_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance ColorPalette/MemoryArray_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance InstMem/dataOut_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 1701.484 ; gain = 372.367
+Finished Technology Mapping : Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 1714.445 ; gain = 385.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -587,37 +719,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 1701.484 ; gain = 372.367
+Finished IO Insertion : Time (s): cpu = 00:01:11 ; elapsed = 00:01:13 . Memory (MB): peak = 1714.445 ; gain = 385.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 1701.484 ; gain = 372.367
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:11 ; elapsed = 00:01:13 . Memory (MB): peak = 1714.445 ; gain = 385.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 1701.484 ; gain = 372.367
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 1714.445 ; gain = 385.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 1701.484 ; gain = 372.367
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 1714.445 ; gain = 385.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 1701.484 ; gain = 372.367
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 1714.445 ; gain = 385.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 1701.484 ; gain = 372.367
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 1714.445 ; gain = 385.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -633,46 +765,53 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |BUFG     |     1|
-|2     |DSP48E1  |     1|
-|3     |LUT1     |     7|
-|4     |LUT2     |     6|
-|5     |LUT3     |    21|
-|6     |LUT4     |    22|
-|7     |LUT5     |    14|
-|8     |LUT6     |    45|
-|9     |MUXF7    |     8|
+|1     |BUFG     |     3|
+|2     |CARRY4   |    77|
+|3     |DSP48E1  |    11|
+|4     |LUT1     |    15|
+|5     |LUT2     |   252|
+|6     |LUT3     |   112|
+|7     |LUT4     |   333|
+|8     |LUT5     |   409|
+|9     |LUT6     |   790|
 |10    |RAMB18E1 |     1|
-|11    |RAMB36E1 |    80|
-|89    |FDCE     |    20|
-|90    |FDRE     |    42|
-|91    |IBUF     |     2|
-|92    |IOBUF    |     2|
-|93    |OBUF     |    30|
+|11    |RAMB36E1 |    81|
+|90    |FDCE     |   383|
+|91    |FDRE     |   187|
+|92    |FDSE     |     2|
+|93    |LD       |     4|
+|94    |LDC      |     7|
+|95    |LDP      |     3|
+|96    |IBUF     |     7|
+|97    |IOBUF    |     2|
+|98    |OBUF     |    30|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 1701.484 ; gain = 372.367
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 1714.445 ; gain = 385.266
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:48 . Memory (MB): peak = 1701.484 ; gain = 200.504
-Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 1701.484 ; gain = 372.367
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:53 ; elapsed = 00:01:03 . Memory (MB): peak = 1714.445 ; gain = 215.316
+Synthesis Optimization Complete : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 1714.445 ; gain = 385.266
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1701.484 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 92 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 1714.445 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 186 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1701.484 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1714.445 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
+  A total of 16 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  LD => LDCE: 4 instances
+  LDC => LDCE: 7 instances
+  LDP => LDPE: 3 instances
 
-Synth Design complete, checksum: 2f22f6d7
+Synth Design complete, checksum: df3ad8cb
 INFO: [Common 17-83] Releasing license: Synthesis
-158 Infos, 171 Warnings, 3 Critical Warnings and 0 Errors encountered.
+159 Infos, 234 Warnings, 4 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 1701.484 ; gain = 372.367
+synth_design: Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 1714.445 ; gain = 385.266
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'C:/Users/adp69/Documents/350FP/FP_AlexPenne.runs/synth_1/Wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Wrapper_utilization_synth.rpt -pb Wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Apr  5 15:40:20 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue Apr  9 15:12:01 2024...
