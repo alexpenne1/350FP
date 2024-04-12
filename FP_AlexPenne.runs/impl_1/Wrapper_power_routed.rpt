@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date             : Tue Apr  9 15:31:59 2024
+| Date             : Fri Apr 12 15:38:37 2024
 | Host             : P1-05 running 64-bit major release  (build 9200)
 | Command          : report_power -file Wrapper_power_routed.rpt -pb Wrapper_power_summary_routed.pb -rpx Wrapper_power_routed.rpx
 | Design           : Wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.198        |
+| Total On-Chip Power (W)  | 0.139        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.097        |
+| Dynamic (W)              | 0.038        |
 | Device Static (W)        | 0.101        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 84.1         |
-| Junction Temperature (C) | 25.9         |
+| Max Ambient (C)          | 84.4         |
+| Junction Temperature (C) | 25.6         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,19 +52,20 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.004 |        3 |       --- |             --- |
-| Slice Logic    |     0.011 |     2716 |       --- |             --- |
-|   LUT as Logic |     0.010 |     1648 |     63400 |            2.60 |
+| Clocks         |     0.001 |        3 |       --- |             --- |
+| Slice Logic    |     0.006 |     6156 |       --- |             --- |
+|   LUT as Logic |     0.006 |     3699 |     63400 |            5.83 |
+|   Register     |    <0.001 |     1634 |    126800 |            1.29 |
 |   CARRY4       |    <0.001 |       77 |     15850 |            0.49 |
-|   Register     |    <0.001 |      532 |    126800 |            0.42 |
+|   F7/F8 Muxes  |    <0.001 |       34 |     63400 |            0.05 |
 |   BUFG         |    <0.001 |        2 |        32 |            6.25 |
-|   Others       |     0.000 |      160 |       --- |             --- |
-| Signals        |     0.014 |     2627 |       --- |             --- |
-| Block RAM      |     0.028 |     81.5 |       135 |           60.37 |
-| DSPs           |     0.007 |       11 |       240 |            4.58 |
-| I/O            |     0.033 |       39 |       210 |           18.57 |
+|   Others       |     0.000 |      159 |       --- |             --- |
+| Signals        |     0.008 |     5842 |       --- |             --- |
+| Block RAM      |     0.008 |     87.5 |       135 |           64.81 |
+| DSPs           |     0.002 |       11 |       240 |            4.58 |
+| I/O            |     0.012 |       39 |       210 |           18.57 |
 | Static Power   |     0.101 |          |           |                 |
-| Total          |     0.198 |          |           |                 |
+| Total          |     0.139 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,16 +75,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.078 |       0.061 |      0.017 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.019 |       0.001 |      0.018 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.013 |       0.009 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.042 |       0.025 |      0.017 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.019 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.007 |       0.003 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.005 |       0.002 |      0.002 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.003 |       0.001 |      0.002 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
@@ -130,7 +131,7 @@ Table of Contents
 +-------------+-----------+-----------------+
 | Clock       | Domain    | Constraint (ns) |
 +-------------+-----------+-----------------+
-| sys_clk_pin | CLK100MHZ |            10.0 |
+| sys_clk_pin | CLK100MHZ |            40.0 |
 +-------------+-----------+-----------------+
 
 
@@ -140,22 +141,17 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+------------------------+-----------+
-| Name                   | Power (W) |
-+------------------------+-----------+
-| Wrapper                |     0.097 |
-|   CPU                  |     0.014 |
-|     INSN_reg_dx_latch  |     0.002 |
-|     INSN_reg_fd_latch  |     0.004 |
-|       loop1[21].a_dffe |     0.001 |
-|     INSN_reg_xm_latch  |     0.001 |
-|     alu_unit           |     0.002 |
-|     rs_minus_rd_alu    |     0.003 |
-|   ColorPalette         |     0.001 |
-|   Display              |     0.006 |
-|   ImageData            |     0.029 |
-|   RegisterFile         |     0.002 |
-|   psiface              |     0.001 |
-+------------------------+-----------+
++-----------------------+-----------+
+| Name                  | Power (W) |
++-----------------------+-----------+
+| Wrapper               |     0.038 |
+|   CPU                 |     0.009 |
+|     INSN_reg_fd_latch |     0.002 |
+|     multdiv_unit      |     0.003 |
+|       multtest        |     0.002 |
+|   Display             |     0.002 |
+|   ImageData           |     0.008 |
+|   RegisterFile        |     0.002 |
++-----------------------+-----------+
 
 

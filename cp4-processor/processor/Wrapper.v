@@ -299,7 +299,10 @@ module Wrapper (LED, BTNL, CLK100MHZ, CPU_RESETN, VGA_R, VGA_B, VGA_G, ps2_clk, 
 	wire[PIXEL_ADDRESS_WIDTH-1:0] imgAddress;  	 // Image address for the image data
 	wire[PALETTE_ADDRESS_WIDTH-1:0] colorAddr; 	 // Color address for the color palette
 	reg[PIXEL_ADDRESS_WIDTH-1:0] curImgAddress =0;
-	assign imgAddress = curImgAddress;
+	reg[PIXEL_ADDRESS_WIDTH-1:0] blankAddr =0;
+	wire isDoneWire;
+	assign isDoneWire = isDone;
+	assign imgAddress = isDoneWire ? blankAddr : curImgAddress;
 	wire[9:0] a1cx = 10'd100;
 	wire[8:0] a1cy = 9'd328;
 	wire[9:0] a2cx = 10'd210;
@@ -558,16 +561,18 @@ module Wrapper (LED, BTNL, CLK100MHZ, CPU_RESETN, VGA_R, VGA_B, VGA_G, ps2_clk, 
 	
 	
 	
-	assign LED[4:0] = instAddr[9:0];
-	assign LED[9:5] = regToWrite;
+	
 	wire[31:0] reg1_value;
-	assign LED[14:10] = reg1_value[4:0];
-	dffe_ref reg1_latch_1(.q(reg1_value[0]), .d(dataToWrite[0]), .en((regToWrite==5'd6)), .clr(1'b0), .clk(clock));
-	dffe_ref reg1_latch_2(.q(reg1_value[1]), .d(dataToWrite[1]), .en((regToWrite==5'd6)), .clr(1'b0), .clk(clock));
-	dffe_ref reg1_latch_3(.q(reg1_value[2]), .d(dataToWrite[2]), .en((regToWrite==5'd6)), .clr(1'b0), .clk(clock));
-	dffe_ref reg1_latch_4(.q(reg1_value[3]), .d(dataToWrite[3]), .en((regToWrite==5'd6)), .clr(1'b0), .clk(clock));
-	dffe_ref reg1_latch_5(.q(reg1_value[4]), .d(dataToWrite[4]), .en((regToWrite==5'd6)), .clr(1'b0), .clk(clock));
-	assign LED[15] = clock;
+	
+	dffe_ref reg1_latch_1(.q(reg1_value[0]), .d(dataToWrite[0]), .en((regToWrite==5'd8)), .clr(1'b0), .clk(clock));
+	dffe_ref reg1_latch_2(.q(reg1_value[1]), .d(dataToWrite[1]), .en((regToWrite==5'd8)), .clr(1'b0), .clk(clock));
+	dffe_ref reg1_latch_3(.q(reg1_value[2]), .d(dataToWrite[2]), .en((regToWrite==5'd8)), .clr(1'b0), .clk(clock));
+	dffe_ref reg1_latch_4(.q(reg1_value[3]), .d(dataToWrite[3]), .en((regToWrite==5'd8)), .clr(1'b0), .clk(clock));
+	dffe_ref reg1_latch_5(.q(reg1_value[4]), .d(dataToWrite[4]), .en((regToWrite==5'd8)), .clr(1'b0), .clk(clock));
+	assign LED[15] = isReallyDone;
+	
+	/* check reg 8 to see if done */
+	
 	
 	
 	
@@ -581,37 +586,66 @@ module Wrapper (LED, BTNL, CLK100MHZ, CPU_RESETN, VGA_R, VGA_B, VGA_G, ps2_clk, 
 	   
 	reg[4:0] regToWrite = 0;
     reg[31:0] dataToWrite = 0;
-
+    reg enableWrite = 0;
+    
+    reg isDone = 0;
+    
 always @(posedge clock) begin
+
+    if (instAddr > 32'd1000) begin
+        memWriteEnable = 1'b0;
+        memAddrIn = 32'd21;
+        
+    end else begin
+        memWriteEnable = mwe;
+        memAddrIn = memAddr[11:0];
+    end
+
+    
+    if (~isDone) begin
     if (BTNC) begin
     
         if (gate_select == 5'd17) begin
             regToWrite = 5'd6;
             dataToWrite = 32'd999;
+            enableWrite = 1'b1;
+            isDone = 1;
         end else begin
             regToWrite[4] = 1'b0;
             regToWrite[3:0] = num_gates;
-            dataToWrite[31:5] = 27'b0;
-            dataToWrite[4:0] = gate_select;
+            
+            
+            dataToWrite = gate_select;
+            enableWrite = 1'b1;
         end
         
     end else begin
         regToWrite = rd;
         dataToWrite = rData;
+        enableWrite = rwe;
+        
     end
-
+    
+    end else begin
+        regToWrite = rd;
+        dataToWrite = rData;
+        enableWrite = rwe;
+    end
+    
+    
+    /* end sequence from assembly */
+    
 end	
 
-assign clock = BTNL;
-	// ADD YOUR MEMORY FILE HERE
-	localparam INSTR_FILE = "matrixmult";
+assign clock = clk25;
+localparam INSTR_FILE = "matrixmult";
 	
 	// Main Processing Unit
 	processor CPU(.clock(clock), .reset(reset), 
 								
 		// ROM
 		.address_imem(instAddr), .q_imem(instData),
-									
+								
 		// Regfile
 		.ctrl_writeEnable(rwe),     .ctrl_writeReg(rd),
 		.ctrl_readRegA(rs1),     .ctrl_readRegB(rs2), 
@@ -629,17 +663,23 @@ assign clock = BTNL;
 	
 	// Register File
 	regfile RegisterFile(.clock(clock), 
-		.ctrl_writeEnable(rwe), .ctrl_reset(reset), 
-		.ctrl_writeReg(rd),
+		.ctrl_writeEnable(enableWrite), .ctrl_reset(reset), 
+		.ctrl_writeReg(regToWrite),
 		.ctrl_readRegA(rs1), .ctrl_readRegB(rs2), 
-		.data_writeReg(rData), .data_readRegA(regA), .data_readRegB(regB));
+		.data_writeReg(dataToWrite), .data_readRegA(regA), .data_readRegB(regB));
 		
-	
-						
+	/* if done, want to get the matrix data and set to LED */
+
+	assign LED[14:6] = memDataOut;
+	assign LED[5:0] = instAddr;
+	wire isReallyDone = instAddr >= 32'd1000;
+	reg [31:0] memAddrIn = 0;
+	reg memWriteEnable = 0;
+				
 	// Processor Memory (RAM)
 	RAM ProcMem(.clk(clock), 
 		.wEn(mwe), 
-		.addr(memAddr[11:0]), 
+		.addr(memAddrIn), 
 		.dataIn(memDataIn), 
 		.dataOut(memDataOut));
 
