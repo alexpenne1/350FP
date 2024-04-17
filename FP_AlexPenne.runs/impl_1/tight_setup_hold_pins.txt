@@ -1,0 +1,21 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|              sys_clk_pin |              sys_clk_pin |                                                                       CPU/PC_addr/loop1[0].a_dffe/q_reg/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                     CPU/decode_B/loop1[31].a_dffe/q_reg/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                     CPU/decode_B/loop1[23].a_dffe/q_reg/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                     CPU/decode_B/loop1[20].a_dffe/q_reg/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                     CPU/decode_B/loop1[26].a_dffe/q_reg/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                     CPU/decode_B/loop1[29].a_dffe/q_reg/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                     CPU/decode_B/loop1[14].a_dffe/q_reg/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                     CPU/decode_B/loop1[28].a_dffe/q_reg/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                      CPU/decode_B/loop1[8].a_dffe/q_reg/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                     CPU/decode_B/loop1[27].a_dffe/q_reg/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                     CPU/decode_B/loop1[30].a_dffe/q_reg/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                     CPU/decode_B/loop1[17].a_dffe/q_reg/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                     CPU/decode_B/loop1[12].a_dffe/q_reg/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                     CPU/decode_B/loop1[11].a_dffe/q_reg/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                      CPU/decode_B/loop1[7].a_dffe/q_reg/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                     CPU/decode_B/loop1[16].a_dffe/q_reg/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                     CPU/decode_B/loop1[18].a_dffe/q_reg/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

@@ -116,6 +116,8 @@ read_mem {
   C:/Users/adp69/Documents/350FP/VGAFiles/image.mem
   C:/Users/adp69/Documents/350FP/FPMem/change_reg1_test.mem
   C:/Users/adp69/Documents/350FP/FPMem/matrixmult.mem
+  C:/Users/adp69/Documents/350FP/VGAFiles/colorsStat.mem
+  C:/Users/adp69/Documents/350FP/VGAFiles/imageStat.mem
 }
 read_verilog -library xil_defaultlib {
   C:/Users/adp69/Documents/350FP/cp4-processor/processor/RAM.v

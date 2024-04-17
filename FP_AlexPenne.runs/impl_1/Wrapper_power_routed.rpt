@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date             : Fri Apr 12 15:38:37 2024
+| Date             : Wed Apr 17 11:18:25 2024
 | Host             : P1-05 running 64-bit major release  (build 9200)
 | Command          : report_power -file Wrapper_power_routed.rpt -pb Wrapper_power_summary_routed.pb -rpx Wrapper_power_routed.rpx
 | Design           : Wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.139        |
+| Total On-Chip Power (W)  | 0.133        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.038        |
+| Dynamic (W)              | 0.031        |
 | Device Static (W)        | 0.101        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.4         |
@@ -52,20 +52,20 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |     0.006 |     6156 |       --- |             --- |
-|   LUT as Logic |     0.006 |     3699 |     63400 |            5.83 |
-|   Register     |    <0.001 |     1634 |    126800 |            1.29 |
+| Clocks         |     0.002 |        3 |       --- |             --- |
+| Slice Logic    |     0.006 |     6263 |       --- |             --- |
+|   LUT as Logic |     0.006 |     3888 |     63400 |            6.13 |
+|   Register     |    <0.001 |     1639 |    126800 |            1.29 |
 |   CARRY4       |    <0.001 |       77 |     15850 |            0.49 |
-|   F7/F8 Muxes  |    <0.001 |       34 |     63400 |            0.05 |
-|   BUFG         |    <0.001 |        2 |        32 |            6.25 |
+|   F7/F8 Muxes  |    <0.001 |       12 |     63400 |            0.02 |
+|   BUFG         |    <0.001 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |      159 |       --- |             --- |
-| Signals        |     0.008 |     5842 |       --- |             --- |
-| Block RAM      |     0.008 |     87.5 |       135 |           64.81 |
+| Signals        |     0.008 |     6001 |       --- |             --- |
+| Block RAM      |     0.010 |     87.5 |       135 |           64.81 |
 | DSPs           |     0.002 |       11 |       240 |            4.58 |
-| I/O            |     0.012 |       39 |       210 |           18.57 |
+| I/O            |     0.003 |       39 |       210 |           18.57 |
 | Static Power   |     0.101 |          |           |                 |
-| Total          |     0.139 |          |           |                 |
+| Total          |     0.133 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,9 +75,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.042 |       0.025 |      0.017 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.019 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.007 |       0.003 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.045 |       0.028 |      0.017 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.005 |       0.001 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -98,7 +98,7 @@ Table of Contents
 | User Input Data             | Confidence | Details                                                | Action                                                                                                             |
 +-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 | Design implementation state | High       | Design is routed                                       |                                                                                                                    |
-| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| Clock nodes activity        | Medium     | More than 5% of clocks are missing user specification  | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
 | I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
 | Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
 | Device models               | High       | Device models are Production                           |                                                                                                                    |
@@ -141,17 +141,20 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-----------------------+-----------+
-| Name                  | Power (W) |
-+-----------------------+-----------+
-| Wrapper               |     0.038 |
-|   CPU                 |     0.009 |
-|     INSN_reg_fd_latch |     0.002 |
-|     multdiv_unit      |     0.003 |
-|       multtest        |     0.002 |
-|   Display             |     0.002 |
-|   ImageData           |     0.008 |
-|   RegisterFile        |     0.002 |
-+-----------------------+-----------+
++------------------------+-----------+
+| Name                   | Power (W) |
++------------------------+-----------+
+| Wrapper                |     0.031 |
+|   CPU                  |     0.010 |
+|     INSN_reg_fd_latch  |     0.002 |
+|       loop1[21].a_dffe |     0.001 |
+|     multdiv_unit       |     0.003 |
+|       multtest         |     0.001 |
+|   Display              |     0.002 |
+|   ImageData            |     0.007 |
+|   InstMem              |     0.002 |
+|   ProcMem              |     0.002 |
+|   RegisterFile         |     0.003 |
++------------------------+-----------+
 
 

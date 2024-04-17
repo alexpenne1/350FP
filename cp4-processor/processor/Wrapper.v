@@ -169,7 +169,7 @@ module Wrapper (LED, BTNL, CLK100MHZ, CPU_RESETN, VGA_R, VGA_B, VGA_G, ps2_clk, 
 	/* MAKE BORDER */
 	wire isInBorderX = (((x >= (center_x - x_max)) & (x <= (center_x - x_min))) | ((x >= (center_x + x_min)) & (x <= (center_x + x_max)))) & (((y <= center_y + y_max) & (y >= center_y - y_max)));
 	wire isInBorderY = (((y >= (center_y - y_max)) & (y <= (center_y - y_min))) | ((y >= (center_y + y_min)) & (y <= (center_y + y_max)))) & (((x <= center_x + x_max) & (x >= center_x - x_max)));
-	wire isInBorder = isInBorderX | isInBorderY;
+	wire isInBorder = (~isDoneWire) & (isInBorderX | isInBorderY);
 	reg simulateReady = 1'b0;
 	reg[3:0] num_gates = 4'b0;
 	reg[4:0] gate_1 = 5'b0;
@@ -298,11 +298,14 @@ module Wrapper (LED, BTNL, CLK100MHZ, CPU_RESETN, VGA_R, VGA_B, VGA_G, ps2_clk, 
 
 	wire[PIXEL_ADDRESS_WIDTH-1:0] imgAddress;  	 // Image address for the image data
 	wire[PALETTE_ADDRESS_WIDTH-1:0] colorAddr; 	 // Color address for the color palette
+	wire[PALETTE_ADDRESS_WIDTH-1:0] colorAddrStat; 	 // Color address for the color palette
+	wire[PALETTE_ADDRESS_WIDTH-1:0] colorAddrCircuit; 	 // Color address for the color palette
 	reg[PIXEL_ADDRESS_WIDTH-1:0] curImgAddress =0;
+	reg[PIXEL_ADDRESS_WIDTH-1:0] initImgAddress=0;
 	reg[PIXEL_ADDRESS_WIDTH-1:0] blankAddr =0;
 	wire isDoneWire;
 	assign isDoneWire = isDone;
-	assign imgAddress = isDoneWire ? blankAddr : curImgAddress;
+	assign imgAddress = curImgAddress;
 	wire[9:0] a1cx = 10'd100;
 	wire[8:0] a1cy = 9'd328;
 	wire[9:0] a2cx = 10'd210;
@@ -346,7 +349,60 @@ module Wrapper (LED, BTNL, CLK100MHZ, CPU_RESETN, VGA_R, VGA_B, VGA_G, ps2_clk, 
 	reg[8:0] y_offset=0;
 	reg[9:0] new_x =0;
 	reg[8:0] new_y =0;
+	
+	reg[8:0] p_a = 100;
+	reg[8:0] p_b = 50;
 	always @(x) begin
+	   initImgAddress = x + 640*y;
+	   /*vert line */
+	   if ((x > 10'd135) & (x < 10'd140) & (y > 9'd154) & (y < 9'd415)) begin
+	       colorDataStat = 12'b0;
+	   /*a*/
+	   end else if ((x > 10'd173) & (x < 10'd270) & (y > (9'd413 - (p_a << 1))) & (y < 9'd413)) begin
+	       colorDataStat = 12'b111000000;
+	   /*b*/
+	   end else if ((x > 10'd397) & (x < 10'd495) & (y > (9'd413 - (p_b << 1))) & (y < 9'd413)) begin
+	       colorDataStat = 12'b000111000;
+	   /*1*/
+	   end else if ((x > 10'd120) & (x < 10'd127) & (y > 9'd154) & (y < 9'd190)) begin
+	       colorDataStat = 12'b0;
+	   /*0*/
+	   end else if ((x > 10'd115) & (x < 10'd120) & (y > 9'd380) & (y < 9'd415)) begin
+	       colorDataStat = 12'b0;
+	   end else if ((x > 10'd125) & (x < 10'd130) & (y > 9'd380) & (y < 9'd415)) begin
+	       colorDataStat = 12'b0;
+	   end else if ((x > 10'd115) & (x < 10'd130) & (y > 9'd380) & (y < 9'd385)) begin
+	       colorDataStat = 12'b0;
+	   end else if ((x > 10'd115) & (x < 10'd130) & (y > 9'd410) & (y < 9'd415)) begin
+	       colorDataStat = 12'b0;
+	   /*horizontal line */
+	   end else if ((x > 10'd135) & (x < 10'd530) & (y > 9'd410) & (y < 9'd415)) begin
+	       colorDataStat = 12'b0;
+	   end else if ((x > 10'd200) & (x < 10'd235) & (y > 9'd437) & (y < 9'd445)) begin
+	       colorDataStat = 12'b0;
+	   end else if ((x > 10'd200) & (x < 10'd210) & (y > 9'd444) & (y < 9'd470)) begin
+	       colorDataStat = 12'b0;
+	   end else if ((x > 10'd225) & (x < 10'd235) & (y > 9'd444) & (y < 9'd470)) begin
+	       colorDataStat = 12'b0;
+	   end else if ((x > 10'd200) & (x < 10'd235) & (y > 9'd455) & (y < 9'd460)) begin
+	       colorDataStat = 12'b0;
+	   end else if ((x > 10'd415) & (x < 10'd425) & (y > 9'd437) & (y < 9'd470)) begin
+	       colorDataStat = 12'b0;
+	   end else if ((x > 10'd415) & (x < 10'd450) & (y > 9'd437) & (y < 9'd442)) begin
+	       colorDataStat = 12'b0;
+	   end else if ((x > 10'd415) & (x < 10'd450) & (y > 9'd465) & (y < 9'd470)) begin
+	       colorDataStat = 12'b0;
+	   end else if ((x > 10'd415) & (x < 10'd450) & (y > 9'd451) & (y < 9'd455)) begin
+	       colorDataStat = 12'b0;
+	   end else if ((x > 10'd450) & (x < 10'd457) & (y > 9'd442) & (y < 9'd451)) begin
+	       colorDataStat = 12'b0;
+	   end else if ((x > 10'd450) & (x < 10'd457) & (y > 9'd455) & (y < 9'd465)) begin
+	       colorDataStat = 12'b0;
+	   end else begin
+	       colorDataStat = 12'b111111111111;
+	   end
+	   
+	   
 	   
 	   if (isInA1Gate) begin
 	       if ((gate_1 == 5'd1) |(gate_1 == 5'd2) |(gate_1 == 5'd3) |(gate_1 == 5'd4) |(gate_1 == 5'd9) |(gate_1 == 5'd10) |(gate_1 == 5'd11) |(gate_1 == 5'd12)) begin
@@ -476,6 +532,8 @@ module Wrapper (LED, BTNL, CLK100MHZ, CPU_RESETN, VGA_R, VGA_B, VGA_G, ps2_clk, 
 	
 	end
 	
+	/* stat image objects */
+
 	
 
 	RAM_VGA #(		
@@ -486,11 +544,16 @@ module Wrapper (LED, BTNL, CLK100MHZ, CPU_RESETN, VGA_R, VGA_B, VGA_G, ps2_clk, 
 	ImageData(
 		.clk(CLK100MHZ), 						 // Falling edge of the 100 MHz clk
 		.addr(imgAddress),					 // Image data address
-		.dataOut(colorAddr),				 // Color palette address
+		.dataOut(colorAddrCircuit),				 // Color palette address
 		.wEn(1'b0)); 						 // We're always reading
 	
 	// Color Palette to Map Color Address to 12-Bit Color
 	wire[BITS_PER_COLOR-1:0] colorData; // 12-bit color data at current pixel
+	reg[BITS_PER_COLOR-1:0] colorDataStat=0; // 12-bit color data at current pixel
+	wire[BITS_PER_COLOR-1:0] colorDataCircuit; // 12-bit color data at current pixel
+	
+    assign colorAddr = colorAddrCircuit;
+    
     
 	RAM_VGA #(
 		.DEPTH(PALETTE_COLOR_COUNT), 		       // Set depth to contain every color		
@@ -500,57 +563,40 @@ module Wrapper (LED, BTNL, CLK100MHZ, CPU_RESETN, VGA_R, VGA_B, VGA_G, ps2_clk, 
 	ColorPalette(
 		.clk(CLK100MHZ), 							   	   // Rising edge of the 100 MHz clk
 		.addr(colorAddr),					       // Address from the ImageData RAM
-		.dataOut(colorData),				       // Color at current pixel
+		.dataOut(colorDataCircuit),				       // Color at current pixel
 		.wEn(1'b0)); 						       // We're always reading
 		
+
 	
 		
 		
 
-    wire [6:0] asciiCode;
-	RAM_VGA #(
-	   .DEPTH(128),
-	   .DATA_WIDTH(7),
-	   .ADDRESS_WIDTH(7),
-	   .MEMFILE("ascii.mem"))
-	Key(
-	   .clk(CLK100MHZ),
-	   .addr(key_data),
-	   .dataOut(asciiCode),
-	   .wEn(1'b0));
-	   
-	localparam
-	   NUMBER_OF_SPRITES = 94,
-	   SPRITE_WIDTH = 50,
-	   SPRITE_AREA = 2500,
-	   SPRITE_ADDR_WIDTH = $clog2(NUMBER_OF_SPRITES * SPRITE_AREA) + 1;
     
-	wire spriteOut;
-	RAM_VGA #(
-	   .DEPTH(NUMBER_OF_SPRITES * SPRITE_AREA),
-	   .DATA_WIDTH(1),
-	   .ADDRESS_WIDTH(SPRITE_ADDR_WIDTH),
-	   .MEMFILE("sprites.mem"))
-	Sprite(
-	   .clk(CLK100MHZ),
-	   .addr((asciiCode - 1) * SPRITE_AREA + x - ref_pointx + SPRITE_WIDTH * (y - ref_pointy)),
-	   .dataOut(spriteOut),
-	   .wEn(1'b0));
+	
+    
+	
 	   
 
-
+    reg [9:0] percent_a = 75;
+    reg [9:0] percent_b = 25;
+    
+    
 
 
     	// Assign to output color from register if active
+    
+    assign colorData = isDoneWire ? colorDataStat : colorDataCircuit;
 	wire[BITS_PER_COLOR-1:0] colorOut; 			  // Output color 
 	assign colorOut = active ? colorData : 12'd0; // When not active, output active
-	
+	assign LED[0] = isDoneWire;
+	assign LED[1] = active;
+	assign LED[2] = isInBorder;
+	assign LED[5:3] = VGA_R;
 	wire [11:0] borderColor = 12'b0;
 	
 	assign {VGA_R, VGA_G, VGA_B} = isInBorder ? borderColor : colorOut;
 	
-	wire [11:0] spriteColor;
-	assign spriteColor = {{12{spriteOut}}};
+	
 	
 	wire rwe, mwe;
 	wire[4:0] rd, rs1, rs2;
@@ -637,7 +683,7 @@ always @(posedge clock) begin
     
 end	
 
-assign clock = clk25;
+assign clock = CLK100MHZ;
 localparam INSTR_FILE = "matrixmult";
 	
 	// Main Processing Unit
@@ -670,8 +716,7 @@ localparam INSTR_FILE = "matrixmult";
 		
 	/* if done, want to get the matrix data and set to LED */
 
-	assign LED[14:6] = memDataOut;
-	assign LED[5:0] = instAddr;
+	
 	wire isReallyDone = instAddr >= 32'd1000;
 	reg [31:0] memAddrIn = 0;
 	reg memWriteEnable = 0;
