@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Thu Apr 18 14:43:44 2024
+| Date         : Fri Apr 19 10:34:03 2024
 | Host         : P1-07 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Wrapper_control_sets_placed.rpt
 | Design       : Wrapper
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    56 |
-|    Minimum number of control sets                        |    56 |
+| Total control sets                                       |    57 |
+|    Minimum number of control sets                        |    57 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |   113 |
+| Unused register locations in slices containing registers |   111 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,14 +39,14 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    56 |
+| Total control sets |    57 |
 | >= 0 to < 4        |     5 |
 | >= 4 to < 6        |     4 |
 | >= 6 to < 8        |     0 |
-| >= 8 to < 10       |     2 |
+| >= 8 to < 10       |     1 |
 | >= 10 to < 12      |     3 |
-| >= 12 to < 14      |     1 |
-| >= 14 to < 16      |     0 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     1 |
 | >= 16              |    41 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              83 |           34 |
-| No           | No                    | Yes                    |             148 |           90 |
-| No           | Yes                   | No                     |              53 |           20 |
+| No           | No                    | No                     |              80 |           37 |
+| No           | No                    | Yes                    |             148 |           95 |
+| No           | Yes                   | No                     |              66 |           25 |
 | Yes          | No                    | No                     |              10 |            3 |
-| Yes          | No                    | Yes                    |            1241 |          647 |
-| Yes          | Yes                   | No                     |             104 |           46 |
+| Yes          | No                    | Yes                    |            1241 |          680 |
+| Yes          | Yes                   | No                     |             104 |           42 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,62 +73,63 @@ Table of Contents
 +--------------------------+-----------------------------------------+---------------------------------------------------------------+------------------+----------------+--------------+
 |       Clock Signal       |              Enable Signal              |                        Set/Reset Signal                       | Slice Load Count | Bel Load Count | Bels / Slice |
 +--------------------------+-----------------------------------------+---------------------------------------------------------------+------------------+----------------+--------------+
-| ~CLK100MHZ_IBUF_BUFG     |                                         |                                                               |                1 |              1 |         1.00 |
-|  center_x_reg[9]_i_1_n_0 |                                         | center_x_reg[9]_i_2_n_0                                       |                1 |              1 |         1.00 |
-|  center_x_reg[7]_i_1_n_0 |                                         | center_x_reg[7]_i_2_n_0                                       |                1 |              2 |         2.00 |
-| ~CLK100MHZ_IBUF_BUFG     |                                         | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |                2 |              3 |         1.50 |
-|  center_x_reg[9]_i_1_n_0 |                                         | center_x_reg[8]_i_1_n_0                                       |                1 |              3 |         3.00 |
+|  n_0_2029_BUFG           |                                         |                                                               |                1 |              1 |         1.00 |
+|  center_x_reg[9]_i_1_n_1 |                                         | center_x_reg[9]_i_2_n_1                                       |                1 |              1 |         1.00 |
+|  center_x_reg[7]_i_1_n_1 |                                         | center_x_reg[7]_i_2_n_1                                       |                1 |              2 |         2.00 |
+|  n_0_2029_BUFG           |                                         | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |                2 |              3 |         1.50 |
+|  center_x_reg[9]_i_1_n_1 |                                         | center_x_reg[8]_i_1_n_1                                       |                1 |              3 |         3.00 |
 |  CLK100MHZ_IBUF_BUFG     | psiface/shift_frame                     | psiface/reset_bit_count                                       |                1 |              4 |         4.00 |
-|  center_x_reg[7]_i_1_n_0 |                                         | center_x_reg[6]_i_1_n_0                                       |                2 |              4 |         2.00 |
-|  center_y_reg[6]_i_2_n_0 |                                         |                                                               |                2 |              4 |         2.00 |
+|  center_x_reg[7]_i_1_n_1 |                                         | center_x_reg[6]_i_1_n_1                                       |                2 |              4 |         2.00 |
+|  center_y_reg[6]_i_2_n_1 |                                         |                                                               |                2 |              4 |         2.00 |
 |  clkSlow                 |                                         |                                                               |                3 |              5 |         1.67 |
-|  CLK100MHZ_IBUF_BUFG     |                                         | regToWrite[3]_i_1_n_0                                         |                5 |              9 |         1.80 |
-|  BTNC_IBUF_BUFG          |                                         |                                                               |                3 |              9 |         3.00 |
+|  BTNC_IBUF_BUFG          |                                         | p_b                                                           |                3 |              9 |         3.00 |
 |  CLK100MHZ_IBUF_BUFG     | psiface/shift_frame                     |                                                               |                3 |             10 |         3.33 |
-|  clk25                   |                                         | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |                4 |             10 |         2.50 |
+|  clk25                   |                                         | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |                5 |             10 |         2.00 |
 |  clk25                   | Display/vPos                            | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |                6 |             10 |         1.67 |
-|  CLK100MHZ_IBUF_BUFG     |                                         | CPU/PC_addr/loop1[11].a_dffe/SS[0]                            |                2 |             12 |         6.00 |
-|  BTNC_IBUF_BUFG          | gate_30                                 | gate_1[4]_i_1_n_0                                             |               10 |             20 |         2.00 |
-|  BTNC_IBUF_BUFG          | gate_40                                 | gate_1[4]_i_1_n_0                                             |                9 |             20 |         2.22 |
-|  BTNC_IBUF_BUFG          | gate_10                                 | gate_1[4]_i_1_n_0                                             |               10 |             20 |         2.00 |
-|  BTNC_IBUF_BUFG          | gate_20                                 | gate_1[4]_i_1_n_0                                             |               10 |             20 |         2.00 |
-|  BTNC_IBUF_BUFG          | gate_5_cy0_in                           | gate_1[4]_i_1_n_0                                             |                6 |             20 |         3.33 |
-|  CLK100MHZ_IBUF_BUFG     |                                         | CPU/INSN_reg_xm_latch/loop1[23].a_dffe/q_reg_1                |                8 |             22 |         2.75 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[26] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               24 |             32 |         1.33 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[16] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               14 |             32 |         2.29 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[19] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               16 |             32 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[24] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               17 |             32 |         1.88 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[22] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               19 |             32 |         1.68 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[30] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               15 |             32 |         2.13 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[29] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               18 |             32 |         1.78 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[4]  | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               17 |             32 |         1.88 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[20] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               19 |             32 |         1.68 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[14] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               17 |             32 |         1.88 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[28] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               22 |             32 |         1.45 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[17] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               19 |             32 |         1.68 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[25] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               15 |             32 |         2.13 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[15] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               13 |             32 |         2.46 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[18] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               16 |             32 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[9]  | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               22 |             32 |         1.45 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[6]  | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               16 |             32 |         2.00 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[7]  | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               18 |             32 |         1.78 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[8]  | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               18 |             32 |         1.78 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[10] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               17 |             32 |         1.88 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[1]  | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               14 |             32 |         2.29 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[11] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               19 |             32 |         1.68 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[0]  | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               17 |             32 |         1.88 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[2]  | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               20 |             32 |         1.60 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[27] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               19 |             32 |         1.68 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[3]  | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               18 |             32 |         1.78 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[5]  | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               25 |             32 |         1.28 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[12] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               18 |             32 |         1.78 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[13] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               19 |             32 |         1.68 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[23] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               19 |             32 |         1.68 |
-|  CLK100MHZ_IBUF_BUFG     | RegisterFile/enableWiresWR/enableWR[21] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               18 |             32 |         1.78 |
-|  CLK100MHZ_IBUF_BUFG     |                                         |                                                               |               25 |             64 |         2.56 |
-| ~CLK100MHZ_IBUF_BUFG     | CPU/multdiv_onreg/q_reg_1               | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               24 |             90 |         3.75 |
-| ~CLK100MHZ_IBUF_BUFG     |                                         | CPU/ismultreg/reset                                           |               84 |            135 |         1.61 |
-| ~CLK100MHZ_IBUF_BUFG     | CPU/multdiv_onreg/INSN_reg_dx_latch_en  | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               59 |            149 |         2.53 |
+|  clock_BUFG              |                                         | CPU/PC_addr/loop1[11].a_dffe/SS[0]                            |                3 |             12 |         4.00 |
+|  clock_BUFG              |                                         | regToWrite[3]_i_1_n_1                                         |                6 |             13 |         2.17 |
+|  clock_BUFG              |                                         |                                                               |               10 |             14 |         1.40 |
+|  BTNC_IBUF_BUFG          | gate_10                                 | p_b                                                           |                9 |             20 |         2.22 |
+|  BTNC_IBUF_BUFG          | gate_20                                 | p_b                                                           |               11 |             20 |         1.82 |
+|  BTNC_IBUF_BUFG          | gate_40                                 | p_b                                                           |                7 |             20 |         2.86 |
+|  BTNC_IBUF_BUFG          | gate_30                                 | p_b                                                           |                7 |             20 |         2.86 |
+|  BTNC_IBUF_BUFG          | gate_5_cy                               | p_b                                                           |                7 |             20 |         2.86 |
+|  clock_BUFG              |                                         | CPU/INSN_reg_xm_latch/loop1[23].a_dffe/q_reg_1                |                8 |             22 |         2.75 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[17] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               20 |             32 |         1.60 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[27] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               18 |             32 |         1.78 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[9]  | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               22 |             32 |         1.45 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[29] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               22 |             32 |         1.45 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[3]  | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               17 |             32 |         1.88 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[4]  | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               16 |             32 |         2.00 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[5]  | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               23 |             32 |         1.39 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[28] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               19 |             32 |         1.68 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[30] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               18 |             32 |         1.78 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[22] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               16 |             32 |         2.00 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[6]  | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               19 |             32 |         1.68 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[16] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               17 |             32 |         1.88 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[12] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               13 |             32 |         2.46 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[18] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               17 |             32 |         1.88 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[19] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               16 |             32 |         2.00 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[24] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               19 |             32 |         1.68 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[1]  | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               22 |             32 |         1.45 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[13] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               18 |             32 |         1.78 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[25] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               13 |             32 |         2.46 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[14] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               20 |             32 |         1.60 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[8]  | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               22 |             32 |         1.45 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[20] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               21 |             32 |         1.52 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[11] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               18 |             32 |         1.78 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[10] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               18 |             32 |         1.78 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[7]  | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               21 |             32 |         1.52 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[21] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               16 |             32 |         2.00 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[23] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               26 |             32 |         1.23 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[15] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               19 |             32 |         1.68 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[26] | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               23 |             32 |         1.39 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[0]  | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               21 |             32 |         1.52 |
+|  clock_BUFG              | RegisterFile/enableWiresWR/enableWR[2]  | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               17 |             32 |         1.88 |
+|  CLK100MHZ_IBUF_BUFG     |                                         |                                                               |               21 |             56 |         2.67 |
+|  n_0_2029_BUFG           | CPU/multdiv_onreg/q_reg_1               | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               31 |             90 |         2.90 |
+|  n_0_2029_BUFG           |                                         | CPU/ismultreg/reset                                           |               88 |            135 |         1.53 |
+|  n_0_2029_BUFG           | CPU/multdiv_onreg/INSN_reg_dx_latch_en  | RegisterFile/loop1[31].a_register/loop1[31].a_dffe/CPU_RESETN |               56 |            149 |         2.66 |
 +--------------------------+-----------------------------------------+---------------------------------------------------------------+------------------+----------------+--------------+
 
 

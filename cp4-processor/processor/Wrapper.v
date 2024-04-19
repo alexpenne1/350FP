@@ -24,9 +24,11 @@
  *
  **/
 
-module Wrapper (LED, BTNL, CLK100MHZ, CPU_RESETN, VGA_R, VGA_B, VGA_G, ps2_clk, ps2_data, hSync, vSync, BTNR, BTNU, BTND, BTNC);
+module Wrapper (LED,CLK100MHZ, BTNL, CPU_RESETN, VGA_R, VGA_B, VGA_G, ps2_clk, ps2_data, hSync, vSync, BTNR, BTNU, BTND, BTNC, SW);
 	input CLK100MHZ;
 	input BTNL, BTNU, BTNR, BTND, BTNC, CPU_RESETN;
+	input [0:0] SW;
+	
 	output[3:0] VGA_R;  // Red Signal Bits
 	output[3:0] VGA_G;  // Green Signal Bits
 	output[3:0] VGA_B;  // Blue Signal Bits
@@ -211,6 +213,9 @@ module Wrapper (LED, BTNL, CLK100MHZ, CPU_RESETN, VGA_R, VGA_B, VGA_G, ps2_clk, 
 	       gate_3_cy = 9'd0;
            gate_4_cy = 9'd0;
 	       gate_5_cy = 9'd0;
+	       
+	       p_a = 0;
+	       p_b = 0;
 	       
 	   end else if (gate_select == 5'd17) begin
 	       simulateReady = 1'b1;
@@ -655,10 +660,10 @@ module Wrapper (LED, BTNL, CLK100MHZ, CPU_RESETN, VGA_R, VGA_B, VGA_G, ps2_clk, 
     assign colorData = isDoneWire ? colorDataStat : colorDataCircuit;
 	wire[BITS_PER_COLOR-1:0] colorOut; 			  // Output color 
 	assign colorOut = active ? colorData : 12'd0; // When not active, output active
-	assign LED[0] = isDoneWire;
-	assign LED[1] = active;
-	assign LED[2] = isInBorder;
-	assign LED[5:3] = VGA_R;
+	assign LED[4:0] = regToWrite;
+	assign LED[9:5] = dataToWrite;
+	
+	
 	wire [11:0] borderColor = 12'b0;
 	
 	assign {VGA_R, VGA_G, VGA_B} = isInBorder ? borderColor : colorOut;
@@ -752,7 +757,7 @@ always @(posedge clock) begin
     
 end	
 
-assign clock = CLK100MHZ;
+assign clock = SW[0] ? BTNL : CLK100MHZ;
 localparam INSTR_FILE = "matrixmult";
 	
 	// Main Processing Unit

@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Thu Apr 18 14:45:00 2024
+| Date         : Fri Apr 19 10:35:18 2024
 | Host         : P1-07 running 64-bit major release  (build 9200)
 | Command      : report_drc -file Wrapper_drc_routed.rpt -pb Wrapper_drc_routed.pb -rpx Wrapper_drc_routed.rpx
 | Design       : Wrapper
@@ -280,17 +280,17 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net center_x_reg[7]_i_1_n_0 is a gated clock net sourced by a combinational pin center_x_reg[7]_i_1/O, cell center_x_reg[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net center_x_reg[7]_i_1_n_1 is a gated clock net sourced by a combinational pin center_x_reg[7]_i_1/O, cell center_x_reg[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net center_x_reg[9]_i_1_n_0 is a gated clock net sourced by a combinational pin center_x_reg[9]_i_1/O, cell center_x_reg[9]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net center_x_reg[9]_i_1_n_1 is a gated clock net sourced by a combinational pin center_x_reg[9]_i_1/O, cell center_x_reg[9]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
 Gated clock check  
-Net center_y_reg[6]_i_2_n_0 is a gated clock net sourced by a combinational pin center_y_reg[6]_i_2/O, cell center_y_reg[6]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net center_y_reg[6]_i_2_n_1 is a gated clock net sourced by a combinational pin center_y_reg[6]_i_2/O, cell center_y_reg[6]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PLCK-12#1 Warning
@@ -300,7 +300,7 @@ Resolution: Poor placement of an IO pin and a BUFG has resulted in the router us
  This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
 
 	BTNC_IBUF_inst (IBUF.O) is locked to N17
-	BTNC_IBUF_BUFG_inst (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y0
+	BTNC_IBUF_BUFG_inst (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y2
 
 Related violations: <none>
 
