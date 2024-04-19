@@ -217,10 +217,77 @@ module Wrapper (LED, BTNL, CLK100MHZ, CPU_RESETN, VGA_R, VGA_B, VGA_G, ps2_clk, 
 	   end else begin
 	       if (num_gates == 4'd0) begin
 	           gate_1 = gate_select;
+	           /* choose statistical based on gate_select 1 */
+	           if (gate_select == 5'd1) begin
+	               p_a = 100;
+	           end else if (gate_select == 5'd2) begin
+	               p_a = 100;
+	           end else if (gate_select == 5'd3) begin
+	               p_a = 0;
+	           end else if (gate_select == 5'd4) begin
+	               p_a = 50;
+	           end else if (gate_select == 5'd5) begin
+	               p_b = 100;
+	           end else if (gate_select == 5'd6) begin
+	               p_b = 100;
+	           end else if (gate_select == 5'd7) begin
+	               p_b = 0;
+	           end else if (gate_select == 5'd8) begin
+	               p_b = 50;
+	           end else if (gate_select == 5'd9) begin
+	               p_a = 100;
+	           end else if (gate_select == 5'd10) begin
+	               p_a = 100;
+	           end else if (gate_select == 5'd11) begin
+	               p_a = 0;
+	           end else if (gate_select == 5'd12) begin
+	               p_a = 50;
+	           end else if (gate_select == 5'd13) begin
+	               p_b = 100;
+	           end else if (gate_select == 5'd14) begin
+	               p_b = 100;
+	           end else if (gate_select == 5'd15) begin
+	               p_b = 0;
+	           end else begin
+	               p_b = 50;
+	           end
 	           gate_1_cx = center_x;
 	           gate_1_cy = center_y;
 	           num_gates = num_gates + 1;
 	       end else if (num_gates == 4'd1) begin
+	           if (gate_select == 5'd1) begin
+	               p_a = 100;
+	           end else if (gate_select == 5'd2) begin
+	               p_a = 100;
+	           end else if (gate_select == 5'd3) begin
+	               p_a = 0;
+	           end else if (gate_select == 5'd4) begin
+	               p_a = 50;
+	           end else if (gate_select == 5'd5) begin
+	               p_b = 100;
+	           end else if (gate_select == 5'd6) begin
+	               p_b = 100;
+	           end else if (gate_select == 5'd7) begin
+	               p_b = 0;
+	           end else if (gate_select == 5'd8) begin
+	               p_b = 50;
+	           end else if (gate_select == 5'd9) begin
+	               p_a = 100;
+	           end else if (gate_select == 5'd10) begin
+	               p_a = 100;
+	           end else if (gate_select == 5'd11) begin
+	               p_a = 0;
+	           end else if (gate_select == 5'd12) begin
+	               p_a = 50;
+	           end else if (gate_select == 5'd13) begin
+	               p_b = 100;
+	           end else if (gate_select == 5'd14) begin
+	               p_b = 100;
+	           end else if (gate_select == 5'd15) begin
+	               p_b = 0;
+	           end else begin
+	               p_b = 50;
+	           end
 	           gate_2 = gate_select;
 	           gate_2_cx = center_x;
 	           gate_2_cy = center_y;
@@ -350,8 +417,8 @@ module Wrapper (LED, BTNL, CLK100MHZ, CPU_RESETN, VGA_R, VGA_B, VGA_G, ps2_clk, 
 	reg[9:0] new_x =0;
 	reg[8:0] new_y =0;
 	
-	reg[8:0] p_a = 100;
-	reg[8:0] p_b = 50;
+	reg[8:0] p_a = 0;
+	reg[8:0] p_b = 0;
 	always @(x) begin
 	   initImgAddress = x + 640*y;
 	   /*vert line */
@@ -646,8 +713,10 @@ always @(posedge clock) begin
         memWriteEnable = mwe;
         memAddrIn = memAddr[11:0];
     end
-
-    
+    if (~CPU_RESETN) begin
+        isDone = 0;
+    end
+        
     if (~isDone) begin
     if (BTNC) begin
     
